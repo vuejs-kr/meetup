@@ -11,7 +11,7 @@
       많이 배울 수 있는 자리가 되었으면 좋겠습니다. :)<br><br>
       감사합니다.
     </p>
-    <a href="#" class="enter-button">참가 신청하기!</a>
+    <a href="http://onoffmix.com/event/96947" class="enter-button" target="_blank">참가 신청하기!</a>
   </div>
 </template>
 
