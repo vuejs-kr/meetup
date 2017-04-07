@@ -1,6 +1,6 @@
 <template>
   <div class="app-footer">
-	Copyright 2016-2017 Vue.js Korea. All rights reserved.
+	Copyright 2017 Vue.js Korea. All rights reserved.
   </div>
 </template>
 
