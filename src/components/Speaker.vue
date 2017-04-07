@@ -19,7 +19,7 @@
           <!-- <img src="~@/assets/zammanbo.jpeg"> -->
         </div>
         <div class="content">
-          <div class="title">Vue 개념과 써야하는 이유를 입문 관심자에게 소개</div><br>
+          <div class="title">백엔드 개발자, 입문자로서 Vue 이해하고 사용하다</div><br>
           <div class="profile-name">차경묵</div>
           <div class="description"></div>
         </div>
@@ -87,6 +87,7 @@
         background-color: white;
         box-shadow: 0 15px 35px rgba(50,50,93,.03), 0 5px 15px rgba(0,0,0,.06);
         cursor: pointer;
+        overflow: hidden;
 
         &:hover {
           box-shadow: 0 15px 35px rgba(50,50,93,.07), 0 5px 15px rgba(0,0,0,.1);
@@ -96,10 +97,10 @@
           float: left;
           width: 120px;
           height: 120px;
+          overflow: hidden;
 
           img {
             width: 120px;
-            height: 120px;
             border-right: 1px solid #EEE;
           }
         }
