@@ -22,6 +22,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~@/assets/media_query';
   .app-header {
     position: fixed;
     top: 0;
@@ -31,10 +32,18 @@
     background-color: white;
     z-index: 1000;
 
+    @include mobile-only {
+      display: none;
+    }
+
     nav {
-      width: 50%;
+      width: 800px;
       height: 80px;
       margin: 0 auto;
+
+      @include tablet-only {
+        width: 600px;
+      }
 
       h1 {
         a {
@@ -61,6 +70,8 @@
 
       ul {
         float: right;
+        padding: 0;
+
         li {
           display: inline-block;
           min-width: 100px;

@@ -22,9 +22,19 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '~@/assets/media_query';
+
   .hero-banner {
-    width: 50%;
+    width: 800px;
     margin: 0 auto;
+
+    @include mobile-only {
+      width: 100%;
+    }
+
+    @include tablet-only {
+      width: 600px;
+    }
 
     h1 {
       img {
@@ -43,6 +53,16 @@
         display: inline-block;
         margin: 0 2px;
         color: #3AB982;
+      }
+
+      @include mobile-only {
+        img {
+          width: 75px;
+          margin-top: -28px;
+          margin-right: -14px;
+        }
+        font-size: 60px;
+        margin-top: 20px;
       }
     }
 
@@ -64,6 +84,10 @@
       margin-top: 80px;
       font-size: 18px;
       text-align: center;
+
+      @include mobile-only {
+        font-size: 14px;
+      }
     }
 
     .enter-button {
