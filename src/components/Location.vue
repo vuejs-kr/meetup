@@ -37,6 +37,7 @@
     @include mobile-only {
       width: 100%;
       margin-bottom: 0;
+      margin-top: 80px;
     }
 
     @include tablet-only {

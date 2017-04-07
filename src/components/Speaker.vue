@@ -16,7 +16,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <!-- <img src="~@/assets/zammanbo.jpeg"> -->
+          <img src="~@/assets/kyeong_mook.jpg">
         </div>
         <div class="content">
           <div class="title">백엔드 개발자, 입문자로서 Vue 이해하고 사용하다</div><br>
@@ -38,7 +38,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <!-- <img src="~@/assets/zammanbo.jpeg"> -->
+          <img src="~@/assets/aria_kim.jpeg">
         </div>
         <div class="content">
           <div class="title">Vue.js와 Firebase 활용기</div><br>
@@ -132,7 +132,7 @@
             margin: 0 auto;
             text-align: center;
             border-radius: 50%;
-            box-shadow: 0 15px 35px rgba(50,50,93,.03), 0 5px 15px rgba(0,0,0,.06);
+            box-shadow: 0 15px 35px rgba(50,50,93,.2), 0 5px 15px rgba(0,0,0,.2);
 
             img {
               border-right: none;
