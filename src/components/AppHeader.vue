@@ -1,13 +1,17 @@
 <template>
-  <div class="app-header">
-    <nav>
-      <h1><a href='#'><img src="~@/assets/logo.png">ue<span>&#183;</span>tiful Korea</a></h1>
-      <ul>
-        <li><a href="#speaker">발표자</a></li>
-        <li><a href="#location">장소</a></li>
-        <li><a href="#" class="enter-button">참가 신청</a></li>
-      </ul>
-    </nav>
+  <div style="width: 100%; height: 80px;">
+    <div class="app-header">
+      <div class="wrapper">
+        <nav>
+          <h1><a href='#'><img src="~@/assets/logo.png">ue<span>&#183;</span>tiful Korea</a></h1>
+          <ul>
+            <li><a href="#speaker">발표자</a></li>
+            <li><a href="#location">장소</a></li>
+            <li><a href="#" class="enter-button">참가 신청</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </div>
 </template>
 
