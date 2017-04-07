@@ -1,0 +1,102 @@
+<template>
+  <div class="app-header">
+    <nav>
+      <h1><a href='#'><img src="~@/assets/logo.png">ue<span>&#183;</span>tiful Korea</a></h1>
+      <ul>
+        <li><a href="#speaker">발표자</a></li>
+        <li><a href="#location">장소</a></li>
+        <li><a href="#" class="enter-button">참가 신청</a></li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'app-header'
+  }
+</script>
+
+<style lang="scss" scoped>
+  .app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #EFEFEF;
+    background-color: white;
+    z-index: 1000;
+
+    nav {
+      width: 50%;
+      height: 80px;
+      margin: 0 auto;
+
+      h1 {
+        a {
+          color: #445b71;
+          text-decoration: none;
+        }
+        img {
+          width: 35px;
+          margin-top: -10px;
+          margin-right: -5px;
+        }
+
+        float: left;
+        margin-top: 2px;
+        line-height: 80px;
+        font-size: 30px;
+
+        span {
+          display: inline-block;
+          margin: 0 2px;
+          color: #3AB982;
+        }
+      }
+
+      ul {
+        float: right;
+        li {
+          display: inline-block;
+          min-width: 100px;
+          line-height: 80px;
+          text-align: center;
+
+          a {
+            font-size: 15px;
+            font-weight: bold;
+            color: #445b71;
+
+            &.enter-button {
+              display: inline-block;
+              width: 150px;
+              height: 40px;
+              text-align: center;
+              line-height: 40px;
+              font-weight: bold;
+              font-size: 15px;
+              text-decoration: none;
+              vertical-align: middle;
+              color: white;
+              border-radius: 30px;
+              background-color: #3AB982;
+              border: none;
+              transition-duration: 0.4s;
+
+              &:active, &:hover {
+                background-color: #319267
+              }
+            }
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+</style>
