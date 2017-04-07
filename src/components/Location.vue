@@ -11,12 +11,12 @@
     mounted () {
       /* eslint-disable */
       var map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(37.5079423, 127.042908),
+        center: new naver.maps.LatLng(37.5078267, 127.0454166),
         zoom: 12
       })
 
       new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.5079423, 127.042908),
+        position: new naver.maps.LatLng(37.5078267, 127.0454166),
         map: map
       })
     }
