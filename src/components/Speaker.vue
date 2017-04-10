@@ -43,6 +43,7 @@
         <div class="content">
           <div class="title">Vue.js와 Firebase 활용기</div><br>
           <div class="profile-name">김인숙</div>
+          <div class="description">가비아 / 프론트엔드 개발을 잘 하고 싶습니다.</div>
         </div>
       </div>
 
