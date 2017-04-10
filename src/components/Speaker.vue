@@ -27,12 +27,12 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <!-- <img src="~@/assets/zammanbo.jpeg"> -->
+          <img src="~@/assets/sl_profile.jpg">
         </div>
         <div class="content">
           <div class="title">웹 디자이너의 도전 Vue.js 따라하기</div><br>
           <div class="profile-name">이승민</div>
-          <div class="description"></div>
+          <div class="description">알고랩에서 웹개발자 및 디자이너로 일하고 있습니다.</div>
         </div>
       </div>
 
