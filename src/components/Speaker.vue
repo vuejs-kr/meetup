@@ -58,6 +58,8 @@
         </div>
       </div>
     </div>
+
+    <a href="https://vuejs-kr.github.io/vue/meetup/vuetiful/korea/2017/04/23/meet-up-slide/" class="enter-button" target="_blank">발표자료 보기!</a>
   </div>
 </template>
 
@@ -172,6 +174,27 @@
           display: block;
           clear: both;
         }
+      }
+    }
+    .enter-button {
+      display: block;
+      width: 200px;
+      height: 40px;
+      margin: 20px auto;
+      margin-top: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      font-size: 15px;
+      text-decoration: none;  
+      color: white;
+      border-radius: 30px;
+      background-color: #3AB982;
+      border: none;
+      transition-duration: 0.4s;
+
+      &:active, &:hover {
+        background-color: #319267
       }
     }
   }
