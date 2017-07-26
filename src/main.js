@@ -1,15 +1,14 @@
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import App from '@/App'
 
-Vue.use(BootstrapVue)
+import plugins from '@/config/plugins'
+import router from '@/config/router'
 
-Vue.config.productionTip = false
+import App from './App'
 
-/* eslint-disable no-new */
-new Vue({
+plugins(Vue)
+
+new Vue({ // eslint-disable-line no-new
+  router,
   el: '#app',
   template: '<App/>',
   components: { App }

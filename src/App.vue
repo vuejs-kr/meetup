@@ -1,29 +1,12 @@
 <template>
   <div id="app">
-    <app-header/>
-    <hero-banner/>
-    <speaker/>
-    <location/>
-    <app-footer/>
+    <router-view />
   </div>
 </template>
 
 <script>
-  import AppHeader from '@/components/AppHeader'
-  import HeroBanner from '@/components/HeroBanner'
-  import Speaker from '@/components/Speaker'
-  import Location from '@/components/Location'
-  import AppFooter from '@/components/AppFooter'
-
   export default {
-    name: 'app',
-    components: {
-      'app-header': AppHeader,
-      'hero-banner': HeroBanner,
-      'speaker': Speaker,
-      'location': Location,
-      'app-footer': AppFooter
-    }
+    name: 'App'
   }
 </script>
 
