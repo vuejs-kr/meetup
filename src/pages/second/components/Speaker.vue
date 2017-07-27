@@ -5,7 +5,7 @@
       현재 발표자 모집 중 입니다. 많은 참여 부탁드립니다. <br>
       <img src='~@/assets/parrot.png'>
     </p>
-    <a href="https://vuejs-kr.github.io/vue/meetup/vuetiful/korea/2017/04/23/meet-up-slide/" class="enter-button" target="_blank">발표자 지원하기!</a>
+    <a href="https://docs.google.com/forms/d/1tdwoibSfGaKbFsvRLy3PRl83P4uX5NV4eFruLRm2zag" class="enter-button" target="_blank">발표자 지원하기!</a>
   </div>
 </template>
 
