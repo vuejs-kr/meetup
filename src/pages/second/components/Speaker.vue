@@ -7,7 +7,7 @@
           <img src="~@/assets/second/dexter.jpeg">
         </div>
         <div class="content">
-          <div class="title">Vue.js 도입기 (설득에서 서비스 오픈까지)</div><br>
+          <div class="title">Vue.js를 이용한 서비스 구축</div><br>
           <div class="profile-name">정준석</div>
         </div>
       </div>
