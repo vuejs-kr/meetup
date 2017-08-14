@@ -46,7 +46,7 @@
           <img src="~@/assets/second/hanwoong.jpg">
         </div>
         <div class="content">
-          <div class="title">나홀로 데이터 시각화 MVP 만들기 (Element UI 사용기)</div><br>
+          <div class="title">나홀로 데이터 시각화 MVP 만들기</div><br>
           <div class="profile-name">김한웅</div>
         </div>
       </div>
