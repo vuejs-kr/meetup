@@ -48,8 +48,7 @@
       감사합니다.
     </p>
 
-    <a href="http://onoffmix.com/event/96947" class="enter-button" target="_blank">참가 신청하기!</a>
-    <!-- <a href="http://onoffmix.com/event/96947" class="enter-button" target="_blank">참가 신청하기!</a> -->
+    <a href="https://onoffmix.com/event/109807" class="enter-button" target="_blank">참가 신청하기!</a>
   </div>
 </template>
 

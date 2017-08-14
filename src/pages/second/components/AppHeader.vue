@@ -7,7 +7,7 @@
           <ul>
             <!-- <li><a href="#speaker">발표자</a></li>
             <li><a href="#location">장소</a></li> -->
-            <li><a href="http://onoffmix.com/event/96947" class="enter-button" target="_blank">참가 신청</a></li>
+            <li><a href="https://onoffmix.com/event/109807" class="enter-button" target="_blank">참가 신청</a></li>
           </ul>
         </nav>
       </div>
