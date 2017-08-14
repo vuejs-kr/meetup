@@ -1,11 +1,75 @@
 <template>
   <div class="speaker">
-    <h1 id="speaker">발표자</h1>
-    <p>
-      현재 발표자 모집 중 입니다. 많은 참여 부탁드립니다. <br>
-      <img src='~@/assets/parrot.png'>
-    </p>
-    <a href="https://docs.google.com/forms/d/1tdwoibSfGaKbFsvRLy3PRl83P4uX5NV4eFruLRm2zag" class="enter-button" target="_blank">발표자 지원하기!</a>
+    <h1 id="speaker">세션</h1>
+    <div class="speaker-list">
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/second/dexter.jpeg">
+        </div>
+        <div class="content">
+          <div class="title">Vue.js 도입기 (설득에서 서비스 오픈까지)</div><br>
+          <div class="profile-name">정준석</div>
+        </div>
+      </div>
+
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/zammanbo.jpeg">
+        </div>
+        <div class="content">
+          <div class="title">컴포넌트야 놀자</div><br>
+          <div class="profile-name">박새미</div>
+        </div>
+      </div>
+
+      <div class="speaker-item">
+        <div class="profile-image">
+        </div>
+        <div class="content">
+          <div class="title">나도 할 수 있다 뷰 SPA</div><br>
+          <div class="profile-name">이치웅</div>
+        </div>
+      </div>
+
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/second/smilee.jpeg">
+        </div>
+        <div class="content">
+          <div class="title">Vuetiful 애니메이션</div><br>
+          <div class="profile-name">이승민</div>
+        </div>
+      </div>
+
+      <div class="speaker-item">
+        <div class="profile-image">
+        </div>
+        <div class="content">
+          <div class="title">나홀로 데이터 시각화 MVP 만들기 (Element UI 사용기)</div><br>
+          <div class="profile-name">김한웅</div>
+        </div>
+      </div>
+
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/second/sunhyoup.png">
+        </div>
+        <div class="content">
+          <div class="title">Vue.js와 Reactive Programming</div><br>
+          <div class="profile-name">이선협</div>
+        </div>
+      </div>
+
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/second/ngenius.jpeg">
+        </div>
+        <div class="content">
+          <div class="title">Vue 채팅 클라이언트 현업적용기</div><br>
+          <div class="profile-name">임석민</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

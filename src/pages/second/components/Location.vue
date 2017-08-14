@@ -2,9 +2,10 @@
   <div class="location">
     <h1 id="location">장소</h1>
     <p>
-      현재 장소 미정입니다.
+      주소: 서울시 강남구 역삼로 180(역삼동, 790-6) 지하 1층 이벤트홀<br>
+      아쉽게도 행사 방문자 분들에 대한 주차권은 제공되지 않습니다. 대중 교통 이용을 추천 드립니다.
     </p>
-    <!-- <div id="map"></div> -->
+    <div id="map"></div>
   </div>
 </template>
 
@@ -14,12 +15,12 @@
     mounted () {
       /* eslint-disable */
       var map = new naver.maps.Map('map', {
-        center: new naver.maps.LatLng(37.5078267, 127.0454166),
+        center: new naver.maps.LatLng(37.495482, 127.0365523),
         zoom: 12
       })
 
       new naver.maps.Marker({
-        position: new naver.maps.LatLng(37.5078267, 127.0454166),
+        position: new naver.maps.LatLng(37.495482, 127.0365523),
         map: map
       })
     }

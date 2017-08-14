@@ -1,13 +1,13 @@
 <template>
-  <div style="width: 100%; height: 80px;">
-    <div class="app-header">
+  <div>
+    <div class="app-header" ref="header">
       <div class="wrapper">
         <nav>
           <h1><a href='#'><img src="~@/assets/logo.png">ue<span>&#183;</span>tiful Korea</a></h1>
           <ul>
             <!-- <li><a href="#speaker">발표자</a></li>
             <li><a href="#location">장소</a></li> -->
-            <!-- <li><a href="http://onoffmix.com/event/96947" class="enter-button" target="_blank">참가 신청</a></li> -->
+            <li><a href="http://onoffmix.com/event/96947" class="enter-button" target="_blank">참가 신청</a></li>
           </ul>
         </nav>
       </div>
@@ -17,27 +17,44 @@
 
 <script>
   export default {
-    name: 'app-header'
+    name: 'app-header',
+    mounted () {
+      window.addEventListener('scroll', () => {
+        if (window.innerHeight < window.scrollY) {
+          this.$refs.header.classList.add('fixed')
+        } else {
+          this.$refs.header.classList.remove('fixed')
+        }
+      })
+    },
+    destroyed () {
+      window.removeEventListener('scroll')
+    }
   }
 </script>
 
 <style lang="scss" scoped>
   @import '~@/assets/media_query';
   .app-header {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100vh;
     width: 100%;
     height: 80px;
     border-bottom: 1px solid #EFEFEF;
     background-color: white;
     z-index: 1000;
 
+    &.fixed {
+      position: fixed;
+      top: 0;
+    }
+
     @include mobile-only {
       display: none;
     }
 
     nav {
-      width: 800px;
+      width: 1000px;
       height: 80px;
       margin: 0 auto;
 

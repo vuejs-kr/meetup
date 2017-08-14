@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <app-header />
+  <div id="second">
     <hero-banner />
+    <app-header />
     <speaker />
-    <sponser />
+    <!-- <sponser /> -->
     <location />
 
     <router-link to="/" class="enter-button">1회 모임 살펴보기</router-link>
@@ -34,6 +34,9 @@
 </script>
 
 <style lang="scss">
+  body {
+    overflow-x: hidden;
+  }
   .enter-button {
     display: block;
     width: 200px;
