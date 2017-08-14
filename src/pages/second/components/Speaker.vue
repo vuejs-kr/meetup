@@ -33,7 +33,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/second/smilee.jpeg">
+          <img src="~@/assets/sl_profile.jpg">
         </div>
         <div class="content">
           <div class="title">Vuetiful 애니메이션</div><br>
