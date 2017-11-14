@@ -71,6 +71,8 @@
         </div>
       </div>
     </div>
+
+    <a href="https://vuejs-kr.github.io/vue/meetup/vuetiful/korea/2017/11/06/meet-up-2nd-slide/" target="_blank" class="enter-button">발표자료 보기!</a>
   </div>
 </template>
 
