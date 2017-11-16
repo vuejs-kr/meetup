@@ -33,6 +33,9 @@
         </div>
       </div>
     </div>
+    <p>Q&amp;A</p>
+    <p>OX 퀴즈</p>
+    <p>네트워킹 파티</p>
   </div>
 </template>
 
@@ -163,7 +166,7 @@
       line-height: 40px;
       font-weight: bold;
       font-size: 15px;
-      text-decoration: none;  
+      text-decoration: none;
       color: white;
       border-radius: 30px;
       background-color: #3AB982;
