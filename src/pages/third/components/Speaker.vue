@@ -32,10 +32,37 @@
           <div class="description">잘부탁해욤</div>
         </div>
       </div>
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/third/kevinGU.png">
+        </div>
+        <div class="content">
+          <div class="title">Q&amp;A</div><br>
+          <div class="profile-name">kevin</div>
+          <div class="description"></div>
+        </div>
+      </div>
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/third/bobLEE.png">
+        </div>
+        <div class="content">
+          <div class="title">OX 퀴즈</div><br>
+          <div class="profile-name">Bob Lee</div>
+          <div class="description"></div>
+        </div>
+      </div>
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/third/seungminLEE.jpg">
+        </div>
+        <div class="content">
+          <div class="title">네트워킹 파티</div><br>
+          <div class="profile-name">이승민</div>
+          <div class="description"></div>
+        </div>
+      </div>
     </div>
-    <p>Q&amp;A</p>
-    <p>OX 퀴즈</p>
-    <p>네트워킹 파티</p>
   </div>
 </template>
 
