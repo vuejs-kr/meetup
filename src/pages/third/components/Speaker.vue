@@ -1,21 +1,38 @@
 <template>
   <div class="speaker">
     <h1 id="speaker">세션</h1>
-    <p>
-      발표자 모집 중 입니다.
-      <a href="https://goo.gl/XkRCuZ" target="_blank" class="enter-button">모집 링크</a>
-    </p>
-    <!-- <div class="speaker-list">
+    <div class="speaker-list">
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/second/sunhyoup.png">
+          <img src="~@/assets/third/kellyWOO.png">
         </div>
         <div class="content">
-          <div class="title">Vue.js와 Reactive Programming</div><br>
-          <div class="profile-name">이선협</div>
+          <div class="title">Virtual dom to render</div><br>
+          <div class="profile-name">우경화(kelly)</div>
+          <div class="description">프론트엔드에 입문한지 얼마 안된 ex퍼블리셔 입니다</div>
         </div>
       </div>
-    </div> -->
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/third/seonghoPARK.png">
+        </div>
+        <div class="content">
+          <div class="title">Vue.js로 Unit Test하기</div><br>
+          <div class="profile-name">박성호</div>
+          <div class="description">마이리얼트립 웹 프론트엔드 개발자입니다!</div>
+        </div>
+      </div>
+      <div class="speaker-item">
+        <div class="profile-image">
+          <img src="~@/assets/third/junseokCHOI.png">
+        </div>
+        <div class="content">
+          <div class="title">pwa 시작하기</div><br>
+          <div class="profile-name">최준석</div>
+          <div class="description">잘부탁해욤</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
