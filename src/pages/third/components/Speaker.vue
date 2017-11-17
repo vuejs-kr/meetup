@@ -38,7 +38,7 @@
         </div>
         <div class="content">
           <div class="title">Q&amp;A</div><br>
-          <div class="profile-name">kevin</div>
+          <div class="profile-name">구자훈</div>
           <div class="description"></div>
         </div>
       </div>
