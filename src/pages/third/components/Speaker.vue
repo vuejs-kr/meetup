@@ -8,7 +8,7 @@
         </div>
         <div class="content">
           <div class="title">Virtual dom to render</div><br>
-          <div class="profile-name">우경화(kelly)</div>
+          <div class="profile-name">우경화</div>
           <div class="description">프론트엔드에 입문한지 얼마 안된 ex퍼블리셔 입니다</div>
         </div>
       </div>
@@ -49,7 +49,7 @@
         <div class="content">
           <div class="title">OX 퀴즈</div><br>
           <div class="profile-name">Bob Lee</div>
-          <div class="description"></div>
+          <div class="description">뷰를 좋아하는 밥입니다.</div>
         </div>
       </div>
       <div class="speaker-item">
@@ -59,7 +59,7 @@
         <div class="content">
           <div class="title">네트워킹 파티</div><br>
           <div class="profile-name">이승민</div>
-          <div class="description"></div>
+          <div class="description">뷰로 먹고사는 소프트웨어 엔지니어입니다.</div>
         </div>
       </div>
     </div>
