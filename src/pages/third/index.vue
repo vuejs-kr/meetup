@@ -3,7 +3,7 @@
     <hero-banner />
     <app-header />
     <speaker />
-    <!-- <sponser /> -->
+    <sponsor />
     <location />
 
     <router-link to="/" class="enter-button">1회 모임 살펴보기</router-link>
@@ -18,7 +18,7 @@
   import HeroBanner from './components/HeroBanner'
   import Speaker from './components/Speaker'
   import Location from './components/Location'
-  // import Sponser from './components/Sponser'
+  import Sponsor from './components/Sponsor'
   import AppFooter from '@/shared-components/AppFooter'
 
   export default {
@@ -28,7 +28,7 @@
       HeroBanner,
       Speaker,
       Location,
-      // Sponser,
+      Sponsor,
       AppFooter
     }
   }

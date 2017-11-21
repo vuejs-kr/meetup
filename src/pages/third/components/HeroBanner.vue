@@ -47,7 +47,7 @@
       즐겁게 참여해주시면 감사하겠습니다.
     </p>
 
-    <a href="#" class="enter-button" target="_blank">참가 신청하기!</a>
+    <a href="http://tumblbug.com/vue" class="enter-button" target="_blank">참가 신청하기!</a>
   </div>
 </template>
 
