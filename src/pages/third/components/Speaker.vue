@@ -59,7 +59,7 @@
         <div class="content">
           <div class="title">네트워킹 파티</div><br>
           <div class="profile-name">이승민</div>
-          <div class="description">뷰로 먹고사는 소프트웨어 엔지니어입니다.</div>
+          <div class="description">Vue.js에 반한 AItrics의 소프트웨어 엔지니어입니다.</div>
         </div>
       </div>
     </div>
