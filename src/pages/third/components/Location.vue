@@ -1,7 +1,10 @@
 <template>
   <div class="location">
     <h1 id="location">장소</h1>
-      <p>미정</p>
+    <p>
+      장소후원: MARU180<br><br>
+      주소: 서울특별시 강남구 역삼로 180 MARU180 B1 이벤트홀 Think<br>
+    </p>
     <div id="map"></div>
   </div>
 </template>
@@ -11,15 +14,15 @@
     name: 'location',
     mounted () {
       /* eslint-disable */
-      // var map = new naver.maps.Map('map', {
-      //   center: new naver.maps.LatLng(37.5078267, 127.0454166),
-      //   zoom: 12
-      // })
+      var map = new naver.maps.Map('map', {
+        center: new naver.maps.LatLng(37.496469, 127.038355),
+        zoom: 12
+      })
 
-      // new naver.maps.Marker({
-      //   position: new naver.maps.LatLng(37.5078267, 127.0454166),
-      //   map: map
-      // })
+      new naver.maps.Marker({
+        position: new naver.maps.LatLng(37.496469, 127.038355),
+        map: map
+      })
     }
   }
 </script>

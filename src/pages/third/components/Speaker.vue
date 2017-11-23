@@ -34,12 +34,11 @@
       </div>
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/third/kevinGU.png">
+          <img src="~@/assets/logo2.png">
         </div>
         <div class="content">
           <div class="title">Q&amp;A</div><br>
-          <div class="profile-name">구자훈</div>
-          <div class="description">드루와드루와</div>
+          <div class="profile-name">진행자</div>
         </div>
       </div>
       <div class="speaker-item">
