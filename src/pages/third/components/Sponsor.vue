@@ -2,6 +2,10 @@
   <div class="sponser">
     <h1 id="sponser">후원</h1>
     <a href="http://coinone.co.kr"><img class="img-sponsor" src="~@/assets/third/coinone-logo.png" alt="코인원"></a>
+    <p>
+      간식후원 코인원
+    </p>
+    <p>정준석, 이선협, 정연호, 장기효(캡틴판교) 외 102명의 기부천사</p>
     <!-- <p>
       밋업 행사 운영을 위한 후원을 기다리고 있습니다.<br>
       만약 후원해주신다면 참석자 분들을 위한 음식/음료, 발표자 분들을 위한 선물,<br>
@@ -80,7 +84,7 @@
       line-height: 40px;
       font-weight: bold;
       font-size: 15px;
-      text-decoration: none;  
+      text-decoration: none;
       color: white;
       border-radius: 30px;
       background-color: #3AB982;
