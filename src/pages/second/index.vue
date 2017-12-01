@@ -6,7 +6,7 @@
     <!-- <sponser /> -->
     <location />
 
-    <router-link to="/" class="enter-button">1회 모임 살펴보기</router-link>
+    <router-link to="/first" class="enter-button">1회 모임 살펴보기</router-link>
 
     <app-footer />
   </div>
