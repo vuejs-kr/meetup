@@ -7,9 +7,9 @@ const NotFound = () => import(/* webpackChunkName: "notfound" */ '@/pages/NotFou
 
 /* eslint-disable import/prefer-default-export */
 export const routes = [
-  { path: '/', name: 'First', component: First },
+  { path: '/first', name: 'First', component: First },
   { path: '/second', name: 'Second', component: Second },
-  { path: '/third', name: 'Third', component: Third },
+  { path: '/', name: 'Third', component: Third },
   { path: '*', name: 'NotFound', component: NotFound }
 ]
 
