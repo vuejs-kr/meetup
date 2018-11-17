@@ -7,27 +7,26 @@
       유료 주차료는 10분 당 1500원 입니다.<br>
       행사 방문자 분들에 대한 주차권은 제공되지 않고 주차 공간이 협소하오니 대중 교통 이용을 추천 드립니다.
     </p>
-    <div id="map"></div>
+    <div id="map" ref='map'></div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-declare const naver: any;
+declare const daum: any;
 
 @Component({})
 export default class Location extends Vue {
   private mounted() {
-    const map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.5078267, 127.0454166),
-      zoom: 12
+    const map = new daum.maps.Map(this.$refs.map, {
+      center: new daum.maps.LatLng(37.5078267, 127.0454166),
+      level: 3
     });
 
-    new naver.maps.Marker({
-      position: new naver.maps.LatLng(37.5078267, 127.0454166),
-      map
-    });
+    new daum.maps.Marker({
+      position: new daum.maps.LatLng(37.5078267, 127.0454166)
+    }).setMap(map);
   }
 }
 </script>

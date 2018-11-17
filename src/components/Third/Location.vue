@@ -5,27 +5,26 @@
       장소후원: MARU180<br><br>
       주소: 서울특별시 강남구 역삼로 180 MARU180 B1 이벤트홀 Think<br>
     </p>
-    <div id="map"></div>
+    <div id="map" ref='map'></div>
   </div>
 </template>
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 
-declare const naver: any;
+declare const daum: any;
 
 @Component({})
 export default class Location extends Vue {
   private mounted() {
-    const map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.496469, 127.038355),
-      zoom: 12
+    const map = new daum.maps.Map(this.$refs.map, {
+      center: new daum.maps.LatLng(37.496469, 127.038355),
+      level: 3
     });
 
-    new naver.maps.Marker({
-      position: new naver.maps.LatLng(37.496469, 127.038355),
-      map
-    });
+    new daum.maps.Marker({
+      position: new daum.maps.LatLng(37.496469, 127.038355)
+    }).setMap(map);
   }
 }
 </script>

@@ -5,27 +5,26 @@
       주소:  강남구 역삼로 165 해성빌딩 팁스타운<br>
       아쉽게도 행사 방문자 분들에 대한 주차권은 제공되지 않습니다. 대중 교통 이용을 추천 드립니다.
     </p>
-    <div id="map"></div>
+    <div id="map" ref='map'></div>
   </div>
 </template>
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 
-declare const naver: any;
+declare const daum: any;
 
 @Component({})
 export default class Location extends Vue {
   private mounted() {
-    const map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.4954189, 127.0371955),
-      zoom: 12
+    const map = new daum.maps.Map(this.$refs.map, {
+      center: new daum.maps.LatLng(37.4954189, 127.0371955),
+      level: 3
     });
 
-    new naver.maps.Marker({
-      position: new naver.maps.LatLng(37.4954189, 127.0371955),
-      map
-    });
+    new daum.maps.Marker({
+      position: new daum.maps.LatLng(37.4954189, 127.0371955)
+    }).setMap(map);
   }
 }
 </script>
