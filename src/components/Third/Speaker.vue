@@ -34,7 +34,7 @@
       </div>
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/logo2.png">
+          <img src="~@/assets/logo.png">
         </div>
         <div class="content">
           <div class="title">Q&amp;A</div><br>

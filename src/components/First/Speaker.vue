@@ -5,7 +5,7 @@
     <div class="speaker-list">
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/zammanbo.jpeg">
+          <img src="~@/assets/first/zammanbo.jpeg">
         </div>
         <div class="content">
           <div class="title">우당탕탕 회사에서 Vue.js를 도입한 삽질기</div><br>
@@ -16,7 +16,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/kyeong_mook.jpg">
+          <img src="~@/assets/first/kyeong_mook.jpg">
         </div>
         <div class="content">
           <div class="title">백엔드 개발자, 입문자로서 Vue 이해하고 사용하다</div><br>
@@ -27,7 +27,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/sl_profile.jpg">
+          <img src="~@/assets/first/sl_profile.jpg">
         </div>
         <div class="content">
           <div class="title">웹 디자이너의 도전 Vue.js 따라하기</div><br>
@@ -38,7 +38,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/aria_kim.jpeg">
+          <img src="~@/assets/first/aria_kim.jpeg">
         </div>
         <div class="content">
           <div class="title">Vue.js와 Firebase 활용기</div><br>
@@ -49,7 +49,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/siba.png">
+          <img src="~@/assets/first/siba.png">
         </div>
         <div class="content">
           <div class="title">Nuxt로 사내 서비스 구현하면서 얻은 경험 공유</div><br>

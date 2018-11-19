@@ -220,7 +220,7 @@ export default class HeroBanner extends Vue {
 
   .background,
   .piece {
-    background-image: url('~@/assets/background.jpg');
+    background-image: url('~@/assets/second/background.jpg');
   }
 
   .shadow {

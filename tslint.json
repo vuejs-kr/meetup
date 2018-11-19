@@ -10,6 +10,7 @@
   },
   "rules": {
     "no-unused-expression": false,
+    "no-string-literal": false,
     "quotemark": [true, "single"],
     "indent": [true, "spaces", 2],
     "interface-name": false,

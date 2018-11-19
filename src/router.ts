@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Sixth from '@/views/Sixth/index.vue';
-import SixthAbout from '@/views/Sixth/About.vue';
-import Fifth from '@/views/Fifth/index.vue';
-import Fourth from '@/views/Fourth/index.vue';
-import Third from '@/views/Third/index.vue';
-import Second from '@/views/Second/index.vue';
-import First from '@/views/First/index.vue';
+const Sixth = () => import('@/views/Sixth/index.vue');
+const SixthAbout = () => import('@/views/Sixth/About.vue');
+const Fifth = () => import('@/views/Fifth/index.vue');
+const Fourth = () => import('@/views/Fourth/index.vue');
+const Third = () => import('@/views/Third/index.vue');
+const Second = () => import('@/views/Second/index.vue');
+const First = () => import('@/views/First/index.vue');
 
-import NotFound from '@/views/NotFound.vue';
+const NotFound = () => import('@/views/NotFound.vue');
 
 Vue.use(Router);
 
@@ -27,13 +27,5 @@ export default new Router({
     { path: '/second', name: 'second', component: Second },
     { path: '/first', name: 'first', component: First },
     { path: '*', name: 'NotFound', component: NotFound }
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (about.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    // }
   ]
 });

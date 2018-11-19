@@ -14,7 +14,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/zammanbo.jpeg">
+          <img src="~@/assets/second/zammanbo.jpeg">
         </div>
         <div class="content">
           <div class="title">컴포넌트야 놀자</div><br>
@@ -33,7 +33,7 @@
 
       <div class="speaker-item">
         <div class="profile-image">
-          <img src="~@/assets/sl_profile.jpg">
+          <img src="~@/assets/second/sl_profile.jpg">
         </div>
         <div class="content">
           <div class="title">Vuetiful 애니메이션</div><br>

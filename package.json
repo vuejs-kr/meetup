@@ -1,7 +1,8 @@
 {
   "name": "meetup",
   "version": "0.1.0",
-  "private": true,
+  "author": "jicjjang <jicjjang12@gmail.com>",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,6 +10,8 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "element-ui": "^2.4.10",
+    "marked": "^0.5.1",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.1.0",
+    "@types/marked": "^0.4.2",
     "@types/mocha": "^5.2.4",
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-plugin-typescript": "^3.1.1",
