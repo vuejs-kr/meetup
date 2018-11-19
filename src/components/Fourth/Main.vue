@@ -1,19 +1,16 @@
 <template lang="html">
   <el-main>
     <el-row>
-      <presenters></presenters>
+      <presenters />
     </el-row>
     <el-row>
-      <program></program>
+      <program />
     </el-row>
     <el-row>
-      <contributors
-        :mobile='{mobile}'
-        :smartphone='{smartphone}'>
-      ></contributors>
+      <contributors />
     </el-row>
     <el-row>
-      <directions></directions>
+      <directions />
     </el-row>
   </el-main>
 </template>
@@ -25,7 +22,6 @@ import Contributors from '@/components/Fourth/contributors/Contributors';
 import Directions from '@/components/Fourth/directions/Directions';
 
 export default {
-  props: ['mobile', 'smartphone'],
   components: {
     Presenters,
     Program,

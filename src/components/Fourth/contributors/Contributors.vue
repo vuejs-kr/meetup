@@ -27,7 +27,6 @@ import Sponsor from '@/components/Fourth/contributors/Sponsor';
 import Volunteer from '@/components/Fourth/contributors/Volunteer';
 
 export default {
-  props: ['mobile', 'smartphone'],
   data() {
     return {
       sponsors,

@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  props: ['scrollY'],
   methods: {
     goToTop() {
       document.body.scrollTop = 0;

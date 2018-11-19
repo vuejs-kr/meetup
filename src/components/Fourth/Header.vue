@@ -19,7 +19,6 @@
 
 <script>
 export default {
-  props: ['scrollY', 'windowHeight', 'mobile', 'smartphone'],
   computed: {
     activeIndex() {
       if (this.scrollY > this.windowHeight) {

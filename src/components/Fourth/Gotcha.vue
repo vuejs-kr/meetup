@@ -24,7 +24,6 @@
 import { registrationUrl, generalInfo } from '@/store/fourth/store';
 
 export default {
-  props: ['laptop', 'desktop', 'mobile', 'smartphone'],
   data() {
     return {
       registrationUrl,

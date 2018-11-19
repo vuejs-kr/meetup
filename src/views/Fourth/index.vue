@@ -1,25 +1,10 @@
 <template>
   <div>
-    <gotcha
-      :laptop='{laptop}'
-      :desktop='{desktop}'
-      :mobile='{mobile}'
-      :smartphone='{smartphone}'>
-    </gotcha>
-    <app-header
-      :scrollY='{scrollY}'
-      :windowHeight='{windowHeight}'
-      :mobile='{mobile}'
-      :smartphone='{smartphone}'>
-    </app-header>
-    <app-main
-      :mobile='{mobile}'
-      :smartphone='{smartphone}'>
-    ></app-main>
-    <app-footer></app-footer>
-    <side-button
-      :scrollY='{scrollY}'>
-    </side-button>
+    <gotcha />
+    <app-header />
+    <app-main />
+    <app-footer />
+    <side-button />
   </div>
 </template>
 
@@ -36,6 +21,7 @@ import SideButton from '@/components/Fourth/SideButton.vue';
 import FourthMixin from '@/views/Fourth/FourthMixin';
 
 Vue.use(ElementUI);
+Vue.mixin(FourthMixin);
 
 @Component({
   components: {
@@ -46,7 +32,7 @@ Vue.use(ElementUI);
     SideButton
   }
 })
-export default class Fourth extends Mixins(FourthMixin) {}
+export default class Fourth extends Vue {}
 </script>
 
 <style lang="scss">
