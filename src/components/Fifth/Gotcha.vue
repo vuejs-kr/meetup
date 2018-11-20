@@ -6,7 +6,7 @@
       </el-carousel>
       <div class="bg-dot"></div>
       <div class="center" :class="{ laptop, desktop }">
-        <img src="~@/assets/fourthFifth/logo.png" alt="뷰티풀 코리아" class="logo" :class="{ laptop, desktop }">
+        <img src="~@/assets/logo.png" alt="뷰티풀 코리아" class="logo" :class="{ laptop, desktop }">
         <div class="info" :class="{ laptop, desktop }">
           <p class="date">{{ generalInfo.date }}<br v-if="mobile || smartphone"><span class="time"> {{ generalInfo.time}}</span></p>
           <p class="location">{{ generalInfo.location }}</p>
@@ -20,10 +20,12 @@
   </el-row>
 </template>
 
+
+
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 
-import { registrationUrl, generalInfo } from '@/store/fourth/store';
+import { registrationUrl, generalInfo } from '@/store/fifth/store';
 
 @Component({})
 export default class Gotcha extends Vue {
@@ -34,7 +36,7 @@ export default class Gotcha extends Vue {
     if (registrationUrl == null || registrationUrl.length < 5) {
       this.$message({
         showClose: true,
-        message: '4월 3일(화) 오전 11시 오픈 예정입니다.',
+        message: '추후 오픈 예정입니다.',
         type: 'warning'
       });
     } else {
@@ -44,7 +46,7 @@ export default class Gotcha extends Vue {
 }
 </script>
 
-<style lang='scss' scoped>
+<style scoped>
 .gotcha {
   position: relative;
 }

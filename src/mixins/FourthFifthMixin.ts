@@ -1,10 +1,18 @@
 import { Component, Vue } from 'vue-property-decorator';
 
+declare module 'vue/types/vue' {
+  interface Vue {
+    windowWidth: number;
+    windowHeight: number;
+    windowScrollY: number;
+  }
+}
+
 @Component
-export default class FourthMixin extends Vue {
-  private windowWidth = window.innerWidth;
-  private windowHeight = window.innerHeight;
-  private scrollY = window.scrollY;
+export default class FourthFifthMixin extends Vue {
+  public windowWidth = window.innerWidth;
+  public windowHeight = window.innerHeight;
+  public windowScrollY = window.scrollY;
 
   public mounted() {
     window.addEventListener('resize', this.getWindowWidth);
@@ -32,7 +40,7 @@ export default class FourthMixin extends Vue {
     return this.windowWidth >= 1920;
   }
   get pageOne() {
-    return this.scrollY < this.windowHeight;
+    return this.windowScrollY < this.windowHeight;
   }
 
   private getWindowWidth() {
@@ -46,7 +54,7 @@ export default class FourthMixin extends Vue {
 
   private handleScroll() {
     if (window.scrollY) {
-      this.scrollY = window.scrollY;
+      this.windowScrollY = window.scrollY;
     }
   }
 }

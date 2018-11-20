@@ -11,10 +11,10 @@
 </template>
 
 <script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 
-import { presentations } from '@/store/fourth/store';
-import Presenter from '@/components/Fourth/presenters/Presenter.vue';
+import { presentations } from '@/store/fifth/store';
+import Presenter from '@/components/Fifth/presenters/Presenter.vue';
 
 @Component({
   components: {

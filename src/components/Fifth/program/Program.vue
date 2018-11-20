@@ -34,10 +34,10 @@
 </template>
 
 <script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 
-import { program } from '@/store/fourth/store';
-import Session from '@/components/Fourth/program/Session.vue';
+import { program } from '@/store/fifth/store';
+import Session from '@/components/Fifth/program/Session.vue';
 
 @Component({
   components: {

@@ -19,10 +19,10 @@
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 
-import Presenters from '@/components/Fourth/presenters/Presenters.vue';
-import Program from '@/components/Fourth/program/Program.vue';
-import Contributors from '@/components/Fourth/contributors/Contributors.vue';
-import Directions from '@/components/Fourth/directions/Directions.vue';
+import Presenters from '@/components/Fifth/presenters/Presenters.vue';
+import Program from '@/components/Fifth/program/Program.vue';
+import Contributors from '@/components/Fifth/contributors/Contributors.vue';
+import Directions from '@/components/Fifth/directions/Directions.vue';
 
 @Component({
   components: {
@@ -35,7 +35,7 @@ import Directions from '@/components/Fourth/directions/Directions.vue';
 export default class Main extends Vue {}
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .el-main {
   padding: 0;
   overflow-x: hidden;

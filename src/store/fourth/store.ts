@@ -42,6 +42,7 @@ export const presentations = [
     title: 'Apollo로 알아보는 Vue in the GraphQL',
     presenter: {
       imgUrl: '/static/fourth/presenters/june.png',
+      fileUrl: 'https://jicjjang.github.io/blog/slides/vue-apollo-graphql/',
       name: '최준석',
       affiliation: 'NHN Bugs',
       keywords: 'graphql, api, apollo, vue',
@@ -341,7 +342,7 @@ export const prevMeetups = [
   },
   {
     name: 'Vuetiful Korea 3회',
-    pageUrl: 'http://vuejs.kr/meetup/'
+    pageUrl: 'http://vuejs.kr/meetup/third'
   }
 ];
 
@@ -349,16 +350,16 @@ export const sns = [
   {
     name: 'Facebook',
     pageUrl: 'https://www.facebook.com/groups/vuejs.korea',
-    faImg: '/static/fourth/sns/facebook.svg'
+    faImg: '/static/sns/facebook.svg'
   },
   {
     name: 'Slack',
     pageUrl: 'https://vuejs-korea.herokuapp.com',
-    faImg: '/static/fourth/sns/slack.svg'
+    faImg: '/static/sns/slack.svg'
   },
   {
     name: 'Github',
     pageUrl: 'https://github.com/vuejs-kr',
-    faImg: '/static/fourth/sns/github.svg'
+    faImg: '/static/sns/github.svg'
   }
 ];

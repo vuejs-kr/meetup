@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Mixins } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import ElementUI from 'element-ui';
 
 import Gotcha from '@/components/Fourth/Gotcha.vue';
@@ -18,10 +18,10 @@ import Main from '@/components/Fourth/Main.vue';
 import Footer from '@/components/Fourth/Footer.vue';
 import SideButton from '@/components/Fourth/SideButton.vue';
 
-import FourthMixin from '@/views/Fourth/FourthMixin';
+import FourthFifthMixin from '@/mixins/FourthFifthMixin';
 
 Vue.use(ElementUI);
-Vue.mixin(FourthMixin);
+Vue.mixin(FourthFifthMixin);
 
 @Component({
   components: {
@@ -36,8 +36,8 @@ export default class Fourth extends Vue {}
 </script>
 
 <style lang="scss">
-@import '~@/assets/fourth/css/import.css';
-@import '~@/assets/fourth/css/element-variables';
+@import '~@/assets/fourthFifth/css/import.css';
+@import '~@/assets/fourthFifth/css/element-variables';
 
 h2.heading {
   font-size: 5vh;

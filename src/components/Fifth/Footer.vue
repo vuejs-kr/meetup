@@ -43,7 +43,7 @@
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 
-import { generalInfo, prevMeetups, sns } from '@/store/fourth/store';
+import { generalInfo, prevMeetups, sns } from '@/store/fifth/store';
 
 @Component({})
 export default class Footer extends Vue {
