@@ -1,0 +1,24 @@
+@import "./scheme";
+
+// Global Styles
+// font
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Montserrat', "Source Code Pro", 'Consolas', "Letter Gothic Std", 'Courier', "Nanum Gothic Coding", monospace;
+    color: $Dark;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.ko {
+    font-family: "Spoqa Han Sans", "spoqahansans", "Apple SD Gothic Neo", "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, "Malgun Gothic", Dotum, sans-serif;
+}
+img {
+    max-width: 100%;
+}

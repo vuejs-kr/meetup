@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+import SixthLayout from '@/views/Sixth/Layout.vue';
 const Sixth = () => import('@/views/Sixth/index.vue');
 const SixthAbout = () => import('@/views/Sixth/About.vue');
 const Fifth = () => import('@/views/Fifth/index.vue');
@@ -16,9 +17,19 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
   routes: [
-    { path: '/', name: 'root', component: Sixth },
-    { path: '/about', name: 'root_about', component: SixthAbout },
+    {
+      path: '/',
+      name: 'root',
+      component: SixthLayout,
+      children: [
+        { path: '', name: 'root', component: Sixth },
+        { path: 'about', name: 'root_about', component: SixthAbout }
+      ]
+    },
     { path: '/sixth', name: 'sixth', redirect: '/' },
     { path: '/sixth/about', name: 'sixth_about', redirect: '/about' },
     { path: '/fifth', name: 'fifth', component: Fifth },
