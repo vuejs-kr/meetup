@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import SixthLayout from '@/views/Sixth/Layout.vue';
+const SixthLayout = () => import('@/views/Sixth/Layout.vue');
 const Sixth = () => import('@/views/Sixth/index.vue');
 const SixthAbout = () => import('@/views/Sixth/About.vue');
 const Fifth = () => import('@/views/Fifth/index.vue');
