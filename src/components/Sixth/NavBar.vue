@@ -1,5 +1,5 @@
 <template>
-  <div class="bar-container" v-responsive="{ mobile: el => el.width <= 500 }">
+  <div class="bar-container" :class="{ mobile: isMobile }">
     <router-link to="/about">ABOUT</router-link>
     <router-link to="/">ARCHIVE</router-link>
     <router-link class="register-border" to="#">REGISTER</router-link>
@@ -7,11 +7,8 @@
 </template>
 
 <script>
-import { ResponsiveDirective } from 'vue-responsive-components';
 export default {
-  directives: {
-    responsive: ResponsiveDirective
-  }
+  props: ['isMobile'],
 };
 </script>
 

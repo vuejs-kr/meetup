@@ -1,6 +1,6 @@
 <template>
   <div id="sixth">
-    <nav-bar />
+    <nav-bar :isMobile="isMobile" />
     <div class="main-container" :class="{ isAbout, isMobile }">
       <img class="main-left" src="~@/assets/sixth/img/vue-left.svg">
       <div class="main-center">
