@@ -1,17 +1,24 @@
 <template>
-  <div class="bar-container" v-responsive="{ mobile: el => el.width <= 500 }">
-    <router-link to="/about">ABOUT</router-link>
-    <router-link to="/">ARCHIVE</router-link>
-    <router-link class="register-border" to="#">REGISTER</router-link>
+  <div class="bar-container" :class="{ mobile: isMobile }">
+    <router-link class="bar-tab" to="/about">ABOUT</router-link>
+    <div class="bar-tab bar-dropdown">
+      <button class="bar-dropdown-button">ARCHIVE</button>
+      <div class="bar-dropdown-menu">
+        <router-link class="bar-dropdown-item first" to="/">1st meetup</router-link>
+        <router-link class="bar-dropdown-item" to="/">2nd meetup</router-link>
+        <router-link class="bar-dropdown-item" to="/">3rd meetup</router-link>
+        <router-link class="bar-dropdown-item" to="/">4th meetup</router-link>
+        <router-link class="bar-dropdown-item" to="/">5th meetup</router-link>
+        <router-link class="bar-dropdown-item" to="/">6th meetup</router-link>
+      </div>
+    </div>
+    <router-link class="bar-tab register-border" to="#">REGISTER</router-link>
   </div>
 </template>
 
 <script>
-import { ResponsiveDirective } from 'vue-responsive-components';
 export default {
-  directives: {
-    responsive: ResponsiveDirective
-  }
+  props: ['isMobile'],
 };
 </script>
 
@@ -25,20 +32,68 @@ export default {
   right: 0;
   display: flex;
   justify-content: flex-end;
-  a {
+  .bar-tab {
     text-decoration: none;
+    height: fit-content;
     color: white;
     padding: 1.6vh 1.6vw 1.6vh 1.6vw;
     letter-spacing: 1.5px;
     font-size: 13px;
-    font-family: 'Montserrat', sans-serif;
     transition: 0.25s;
+    &:hover {
+      font-weight: bold;
+    }
   }
-  a.router-link-exact-active {
-    font-weight: bold;
+  .bar-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    .bar-dropdown-button {
+      background: none;
+      color: white;
+      padding: 1.6vh 1.6vw 1.6vh 1.6vw;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+    .bar-dropdown-menu {
+      transition: all 0.3s ease;
+      position: relative;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 0.5vw;
+      border-top: 4px solid #41b883;
+      .bar-dropdown-item {
+        transition: all 0.3s ease;
+        background: white;
+        padding: 1.6vh 0.5vw;
+        width: 100%;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1;
+        letter-spacing: normal;
+        &:hover {
+          background: #d0d6dc;
+        }
+      }
+      .first {
+        box-shadow: inset 0px 10px 10px -7px rgba(0,0,0,0.2);
+      }
+    }
+    &:hover {
+      .bar-dropdown-menu {
+        opacity: 1;
+      }
+    }
   }
-  a + a {
-    margin-left: 1vw;
+  .bar-tab + .bar-tab {
+    margin-left: 0.8vw;
   }
   .register-border {
     background: #41b883;
@@ -55,16 +110,29 @@ export default {
   align-items: center;
   margin: 0;
   z-index: 1;
-  a {
+  .bar-dropdown {
+    .bar-dropdown-button {
+      color: #34495e;
+      font-size: 0.5rem;
+    }
+    .bar-dropdown-menu {
+      position: absolute;
+      top: calc(8vh - 2px);
+      width: 70px;
+      border-top: 2px solid #41b883;
+      .bar-dropdown-item {
+        font-size: 0.5rem;
+        width: 100%;
+      }
+    }
+  }
+  .bar-tab {
     color: #34495e;
     margin: 0;
     font-size: 0.5rem;
   }
-  a.router-link-exact-active {
-    font-weight: bold;
-  }
-  a + a {
-    margin-left: 5vw;
+  .bar-tab + .bar-tab {
+    margin-left: 12.5vw;
   }
   .register-border {
     color: white;

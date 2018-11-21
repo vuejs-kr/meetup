@@ -1,29 +1,27 @@
 <template>
-  <div class="sticky-container" v-responsive="{ mobile: el => el.width <= 500 }">
+  <div class="sticky-container">
     <div class="sticky-logo-container">
       <router-link to="/"><img class="sticky-logo" src="~@/assets/sixth/img/logo-wordtype@2x.png"></router-link>
     </div>
-    <div class="sticky-button-container">
-      <router-link to="/about">ABOUT</router-link>
-      <router-link to="/">ARCHIVE</router-link>
-      <router-link class="register-border" to="#">REGISTER</router-link>
+    <div class="sticky-tab-container">
+      <router-link class="sticky-tab" to="/about">ABOUT</router-link>
+      <div class="sticky-tab sticky-dropdown">
+        <button class="sticky-dropdown-button">ARCHIVE</button>
+        <div class="sticky-dropdown-menu">
+          <router-link class="sticky-dropdown-item first" to="/">1st meetup</router-link>
+          <router-link class="sticky-dropdown-item" to="/">2nd meetup</router-link>
+          <router-link class="sticky-dropdown-item" to="/">3rd meetup</router-link>
+          <router-link class="sticky-dropdown-item" to="/">4th meetup</router-link>
+          <router-link class="sticky-dropdown-item" to="/">5th meetup</router-link>
+          <router-link class="sticky-dropdown-item" to="/">6th meetup</router-link>
+        </div>
+      </div>
+      <router-link class="sticky-tab register-border" to="#">REGISTER</router-link>
     </div>
   </div>
 </template>
 
-<script>
-import { ResponsiveDirective } from 'vue-responsive-components';
-export default {
-  directives: {
-    responsive: ResponsiveDirective
-  }
-};
-</script>
-
 <style lang="scss" scoped>
-.sticky-container.mobile {
-  visibility: hidden;
-}
 .sticky-container {
   position: fixed;
   display: flex;
@@ -39,22 +37,68 @@ export default {
       width: 20vw;
     }
   }
-  .sticky-button-container {
+  .sticky-tab-container {
     display: flex;
     flex: 1;
     height: 100%;
     align-items: center;
     justify-content: center;
-    a {
+    .sticky-tab {
       text-decoration: none;
       color: #34495e;
       padding: 1.6vh 1.6vw 1.6vh 1.6vw;
       letter-spacing: 1.5px;
       font-size: 13px;
-      font-family: 'Montserrat', sans-serif;
       transition: 0.25s;
     }
-    a + a {
+    .sticky-dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      .sticky-dropdown-button {
+        padding: 1.6vh 1.6vw 1.6vh 1.6vw;
+        letter-spacing: 1.5px;
+        font-size: 13px;
+      }
+      .sticky-dropdown-menu {
+        transition: all 0.3s ease;
+        position: absolute;
+        top: calc(10vh - 4px);
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0.5vw;
+        border-top: 4px solid #41b883;
+        .sticky-dropdown-item {
+          transition: all 0.3s ease;
+          background: white;
+          padding: 2.5vh 0.5vw;
+          width: 100%;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 1;
+          letter-spacing: normal;
+          &:hover {
+            background: #d0d6dc;
+          }
+        }
+        .first {
+          box-shadow: inset 0px 10px 10px -7px rgba(0,0,0,0.2);
+        }
+      }
+      &:hover {
+        .sticky-dropdown-button{
+          font-weight: bold;
+        }
+        .sticky-dropdown-menu {
+          opacity: 1;
+        }
+      }
+    }
+    .sticky-tab + .sticky-tab {
       margin-left: 1vw;
     }
     .register-border {
