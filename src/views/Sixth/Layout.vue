@@ -54,7 +54,7 @@ export default class SixthLayout extends Vue {
   }
 
   private get isDesktop() {
-    return this.windowSize.height > 600;
+    return this.windowSize.width > 600;
   }
 
   private get isMobile() {

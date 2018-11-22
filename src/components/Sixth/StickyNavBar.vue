@@ -5,22 +5,40 @@
     </div>
     <div class="sticky-tab-container">
       <router-link class="sticky-tab" to="/about">ABOUT</router-link>
-      <div class="sticky-tab sticky-dropdown">
-        <button class="sticky-dropdown-button">ARCHIVE</button>
-        <div class="sticky-dropdown-menu">
-          <router-link class="sticky-dropdown-item first" to="/">1st meetup</router-link>
-          <router-link class="sticky-dropdown-item" to="/">2nd meetup</router-link>
-          <router-link class="sticky-dropdown-item" to="/">3rd meetup</router-link>
-          <router-link class="sticky-dropdown-item" to="/">4th meetup</router-link>
-          <router-link class="sticky-dropdown-item" to="/">5th meetup</router-link>
-          <router-link class="sticky-dropdown-item" to="/">6th meetup</router-link>
-        </div>
+      <div class="sticky-tab sticky-dropdown" @mouseleave="hideDropdown">
+        <button class="sticky-dropdown-button" @mouseover="showDropdown">ARCHIVE</button>
+        <transition name="fade">
+          <div class="sticky-dropdown-menu" v-if="this.dropdownDisplayed">
+            <router-link class="sticky-dropdown-item first" to="/">1st meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/">2nd meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/">3rd meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/">4th meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/">5th meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/">6th meetup</router-link>
+          </div>
+        </transition>
       </div>
       <router-link class="sticky-tab register-border" to="#">REGISTER</router-link>
     </div>
   </div>
 </template>
-
+<script>
+export default {
+ data() {
+    return {
+      dropdownDisplayed: false,
+    };
+  },
+  methods: {
+    showDropdown() {
+      this.dropdownDisplayed = true;
+    },
+    hideDropdown() {
+      this.dropdownDisplayed = false;
+    },
+  }
+};
+</script>
 <style lang="scss" scoped>
 .sticky-container {
   position: fixed;
@@ -46,7 +64,7 @@
     .sticky-tab {
       text-decoration: none;
       color: #34495e;
-      padding: 1.6vh 1.6vw 1.6vh 1.6vw;
+      padding: 1.6vh 1.6vw;
       letter-spacing: 1.5px;
       font-size: 13px;
       transition: 0.25s;
@@ -55,17 +73,20 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0;
+      padding: 2.5vh 0;
       .sticky-dropdown-button {
-        padding: 1.6vh 1.6vw 1.6vh 1.6vw;
+        cursor: pointer;
+        padding: 1.6vh 1.6vw;
         letter-spacing: 1.5px;
         font-size: 13px;
+        &:hover {
+          font-weight: bold;
+        }
       }
       .sticky-dropdown-menu {
         transition: all 0.3s ease;
         position: absolute;
         top: calc(10vh - 4px);
-        opacity: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -89,14 +110,6 @@
           box-shadow: inset 0px 10px 10px -7px rgba(0,0,0,0.2);
         }
       }
-      &:hover {
-        .sticky-dropdown-button{
-          font-weight: bold;
-        }
-        .sticky-dropdown-menu {
-          opacity: 1;
-        }
-      }
     }
     .sticky-tab + .sticky-tab {
       margin-left: 1vw;
@@ -110,5 +123,11 @@
       font-weight: bold;
     }
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
