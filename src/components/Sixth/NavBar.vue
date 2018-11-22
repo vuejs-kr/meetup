@@ -1,16 +1,18 @@
 <template>
   <div class="bar-container" :class="{ mobile: isMobile }">
     <router-link class="bar-tab" to="/about">ABOUT</router-link>
-    <div class="bar-tab bar-dropdown">
-      <button class="bar-dropdown-button">ARCHIVE</button>
-      <div class="bar-dropdown-menu">
-        <router-link class="bar-dropdown-item first" to="/">1st meetup</router-link>
-        <router-link class="bar-dropdown-item" to="/">2nd meetup</router-link>
-        <router-link class="bar-dropdown-item" to="/">3rd meetup</router-link>
-        <router-link class="bar-dropdown-item" to="/">4th meetup</router-link>
-        <router-link class="bar-dropdown-item" to="/">5th meetup</router-link>
-        <router-link class="bar-dropdown-item" to="/">6th meetup</router-link>
-      </div>
+    <div class="bar-tab bar-dropdown" @mouseleave="hideDropdown">
+      <button class="bar-dropdown-button" @mouseover="showDropdown">ARCHIVE</button>
+      <transition name="fade">
+        <div v-if="this.dropdownDisplayed" class="bar-dropdown-menu">
+          <router-link class="bar-dropdown-item first" to="/">1st meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/">2nd meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/">3rd meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/">4th meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/">5th meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/">6th meetup</router-link>
+        </div>
+      </transition>
     </div>
     <router-link class="bar-tab register-border" to="#">REGISTER</router-link>
   </div>
@@ -19,6 +21,19 @@
 <script>
 export default {
   props: ['isMobile'],
+  data() {
+    return {
+      dropdownDisplayed: false,
+    };
+  },
+  methods: {
+    showDropdown() {
+      this.dropdownDisplayed = true;
+    },
+    hideDropdown() {
+      this.dropdownDisplayed = false;
+    },
+  }
 };
 </script>
 
@@ -51,6 +66,7 @@ export default {
     padding: 0;
     .bar-dropdown-button {
       background: none;
+      cursor: pointer;
       color: white;
       padding: 1.6vh 1.6vw 1.6vh 1.6vw;
       letter-spacing: 1.5px;
@@ -61,8 +77,8 @@ export default {
     }
     .bar-dropdown-menu {
       transition: all 0.3s ease;
-      position: relative;
-      opacity: 0;
+      position: absolute;
+      top: 5vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -84,11 +100,6 @@ export default {
       }
       .first {
         box-shadow: inset 0px 10px 10px -7px rgba(0,0,0,0.2);
-      }
-    }
-    &:hover {
-      .bar-dropdown-menu {
-        opacity: 1;
       }
     }
   }
@@ -138,6 +149,12 @@ export default {
     color: white;
     font-weight: bold;
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
 
