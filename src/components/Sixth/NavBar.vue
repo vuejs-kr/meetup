@@ -23,7 +23,7 @@ export default {
   props: ['isMobile'],
   data() {
     return {
-      dropdownDisplayed: false,
+      dropdownDisplayed: false
     };
   },
   methods: {
@@ -32,7 +32,7 @@ export default {
     },
     hideDropdown() {
       this.dropdownDisplayed = false;
-    },
+    }
   }
 };
 </script>
@@ -51,9 +51,9 @@ export default {
     text-decoration: none;
     height: fit-content;
     color: white;
-    padding: 1.6vh 1.6vw 1.6vh 1.6vw;
+    padding: 1.6vh 3vw 1.6vh 3vw;
     letter-spacing: 1.5px;
-    font-size: 13px;
+    font-size: 1rem;
     transition: 0.25s;
     &:hover {
       font-weight: bold;
@@ -68,9 +68,9 @@ export default {
       background: none;
       cursor: pointer;
       color: white;
-      padding: 1.6vh 1.6vw 1.6vh 1.6vw;
+      padding: 1.6vh 3vw 1.6vh 3vw;
       letter-spacing: 1.5px;
-      font-size: 13px;
+      font-size: 1rem;
       &:hover {
         font-weight: bold;
       }
@@ -99,7 +99,7 @@ export default {
         }
       }
       .first {
-        box-shadow: inset 0px 10px 10px -7px rgba(0,0,0,0.2);
+        box-shadow: inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
       }
     }
   }
@@ -124,15 +124,15 @@ export default {
   .bar-dropdown {
     .bar-dropdown-button {
       color: #34495e;
-      font-size: 0.5rem;
+      font-size: 1rem;
     }
     .bar-dropdown-menu {
       position: absolute;
       top: calc(8vh - 2px);
-      width: 70px;
+      width: 112px;
       border-top: 2px solid #41b883;
       .bar-dropdown-item {
-        font-size: 0.5rem;
+        font-size: 1rem;
         width: 100%;
       }
     }
@@ -140,18 +140,19 @@ export default {
   .bar-tab {
     color: #34495e;
     margin: 0;
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
   .bar-tab + .bar-tab {
-    margin-left: 12.5vw;
+    margin-left: 8vw;
   }
   .register-border {
     color: white;
     font-weight: bold;
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: all .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

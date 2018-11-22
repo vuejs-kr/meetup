@@ -24,9 +24,9 @@
 </template>
 <script>
 export default {
- data() {
+  data() {
     return {
-      dropdownDisplayed: false,
+      dropdownDisplayed: false
     };
   },
   methods: {
@@ -35,7 +35,7 @@ export default {
     },
     hideDropdown() {
       this.dropdownDisplayed = false;
-    },
+    }
   }
 };
 </script>
@@ -45,14 +45,14 @@ export default {
   display: flex;
   top: 0;
   width: 100vw;
-  height: 10vh;
+  height: 8vh;
   background: white;
   box-shadow: 0 5px 13px 0 rgba(0, 0, 0, 0.2);
   align-items: center;
   .sticky-logo-container {
     flex: 1;
     .sticky-logo {
-      width: 20vw;
+      width: 250px;
     }
   }
   .sticky-tab-container {
@@ -86,7 +86,7 @@ export default {
       .sticky-dropdown-menu {
         transition: all 0.3s ease;
         position: absolute;
-        top: calc(10vh - 4px);
+        top: calc(8vh - 4px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -107,7 +107,7 @@ export default {
           }
         }
         .first {
-          box-shadow: inset 0px 10px 10px -7px rgba(0,0,0,0.2);
+          box-shadow: inset 0px 10px 10px -7px rgba(0, 0, 0, 0.2);
         }
       }
     }
@@ -124,8 +124,9 @@ export default {
     }
   }
 }
-.fade-enter-active, .fade-leave-active {
-  transition: all .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

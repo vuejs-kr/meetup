@@ -11,8 +11,8 @@
       </div>
       <img class="main-right" src="~@/assets/sixth/img/vue-right.svg">
     </div>
-    <transition name="slide-fade" v-if="this.isDesktop">
-      <sticky-nav-bar v-if="this.showSticky" />
+    <transition name="slide-fade" v-if="isDesktop">
+      <sticky-nav-bar v-if="showSticky" />
     </transition>
     <router-view/>
     <footer-component />
