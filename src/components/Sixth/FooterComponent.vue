@@ -3,13 +3,13 @@
     <div class="footer-content">
       <h1>FOLLOW US ON</h1>
       <div class="footer-button-container">
-        <a href="https://www.facebook.com">
+        <a href="https://www.facebook.com/groups/vuejs.korea/" target='_blank'>
           <img src="~@/assets/sixth/img/ic-facebook.svg" alt="facebook">
         </a>
-        <a href="https://www.slack.com">
+        <a href="https://vuejs-korea-invitation.herokuapp.com/" target='_blank'>
           <img src="~@/assets/sixth/img/ic-slack.svg" alt="slack">
         </a>
-        <a href="https://www.github.com">
+        <a href="https://github.com/vuejs-kr" target='_blank'>
           <img src="~@/assets/sixth/img/ic-github.svg" alt="github">
         </a>
       </div>
@@ -50,8 +50,8 @@ export default {};
       margin-top: 4vh;
       margin-bottom: 8vh;
       a > img {
-        width: 5vmax;
-        height: 5vmax;
+        width: 40px;
+        height: 40px;
       }
       a + a {
         margin-left: 3vmax;

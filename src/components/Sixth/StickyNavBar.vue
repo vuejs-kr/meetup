@@ -9,16 +9,16 @@
         <button class="sticky-dropdown-button" @mouseover="showDropdown">ARCHIVE</button>
         <transition name="fade">
           <div class="sticky-dropdown-menu" v-if="this.dropdownDisplayed">
-            <router-link class="sticky-dropdown-item first" to="/">1st meetup</router-link>
-            <router-link class="sticky-dropdown-item" to="/">2nd meetup</router-link>
-            <router-link class="sticky-dropdown-item" to="/">3rd meetup</router-link>
-            <router-link class="sticky-dropdown-item" to="/">4th meetup</router-link>
-            <router-link class="sticky-dropdown-item" to="/">5th meetup</router-link>
-            <router-link class="sticky-dropdown-item" to="/">6th meetup</router-link>
+            <router-link class="sticky-dropdown-item first" to="/first">1st meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/second">2nd meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/third">3rd meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/fourth">4th meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/fifth">5th meetup</router-link>
+            <router-link class="sticky-dropdown-item" to="/sixth">6th meetup</router-link>
           </div>
         </transition>
       </div>
-      <router-link class="sticky-tab register-border" to="#">REGISTER</router-link>
+      <a class="sticky-tab register-border" href="https://meetgo.kr/#/userEventDetail/vuetiful06" target="_blank">REGISTER</a>
     </div>
   </div>
 </template>
@@ -66,7 +66,7 @@ export default {
       color: #34495e;
       padding: 1.6vh 1.6vw;
       letter-spacing: 1.5px;
-      font-size: 13px;
+      font-size: 1rem;
       transition: 0.25s;
     }
     .sticky-dropdown {
@@ -78,10 +78,8 @@ export default {
         cursor: pointer;
         padding: 1.6vh 1.6vw;
         letter-spacing: 1.5px;
-        font-size: 13px;
-        &:hover {
-          font-weight: bold;
-        }
+        font-size: 1rem;
+        outline: none;
       }
       .sticky-dropdown-menu {
         transition: all 0.3s ease;

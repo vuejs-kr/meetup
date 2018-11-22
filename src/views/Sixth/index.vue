@@ -13,7 +13,7 @@
         이번 밋업은 딱딱한 모임이 아닌 모인 분들끼리 친해질 수 있는 자리를 만들고자 합니다.<br>
         즐겁게 참여해주시면 감사하겠습니다.<br>
       </p>
-      <button class="join-btn ko bold">참가신청</button>
+      <a class="join-btn ko bold" href="https://meetgo.kr/#/userEventDetail/vuetiful06" target='_blank'>참가신청</a>
     </section>
     <div class="session-wrap">
       <h3 class="session-header">Session</h3>
@@ -34,14 +34,15 @@
         <dd class="address ko">서울특별시 강남구 강남대로 382 메리츠타워 16층</dd>
         <dd class="location-name">NAVER D2 Startup Factory</dd>
       </dl>
-      <a href="#" class="d2-link">
-        <img src="~@/assets/sixth/img/d2-logo.jpg" alt="Naver D2">
+      <a href="http://www.d2startup.com/" class="d2-link" target="_blank">
+        <img src="/static/sixth/img/sponsors/d2-logo.jpg" alt="Naver D2" />
       </a>
+      <div id="map" ref='map'></div>
     </div>
     <div class="sponsor-wrap">
       <h3 class="sponsor-title">Sponsor</h3>
-      <a href="#" class="sponsor-link">
-        <img src="~@/assets/sixth/img/line-logo.png" alt="Naver Line">
+      <a href="https://linepluscorp.com/" class="sponsor-link" target="_blank">
+        <img src="/static/sixth/img/sponsors/line-logo.png" alt="Line corp" />
       </a>
     </div>
   </div>
@@ -50,38 +51,53 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+declare const daum: any;
+
 @Component({})
 export default class Sixth extends Vue {
   private sessionList = [
     {
-      id: 1,
-      title: 'NUXT로 Art하게 프론트 설계해보기',
-      desc: 'NUXT로 Art하게 프론트 설계해보기',
-      author: '김선종, 아티프렌즈',
-      thumbUrl: 'https://vuejs.org/images/logo.png'
+      title: 'Vue.js를 이용한 백오피스 구현기',
+      desc: '관리자, 물류, 점포 등의 페이지를 구현하면서 생각한 컴포넌트 재사용성 이슈와 조금의 백앤드 이야기',
+      author: '마광휘, 와인포인트',
+      thumbUrl: '/static/sixth/img/presenters/author01.jpeg'
     },
     {
       id: 2,
-      title: 'NUXT로 Art하게 프론트 설계해보기',
-      desc: 'NUXT로 Art하게 프론트 설계해보기',
-      author: '김선종, 아티프렌즈',
-      thumbUrl: 'https://vuejs.org/images/logo.png'
+      title: 'Nuxt.js vs Next.js',
+      desc: 'Nuxt.js vs Next.js',
+      author: '임석민',
+      thumbUrl: '/static/sixth/img/presenters/author02.jpeg'
     },
     {
       id: 3,
-      title: 'NUXT로 Art하게 프론트 설계해보기',
-      desc: 'NUXT로 Art하게 프론트 설계해보기',
-      author: '김선종, 아티프렌즈',
-      thumbUrl: 'https://vuejs.org/images/logo.png'
-    },
-    {
-      id: 4,
-      title: 'NUXT로 Art하게 프론트 설계해보기',
-      desc: 'NUXT로 Art하게 프론트 설계해보기',
-      author: '김선종, 아티프렌즈',
-      thumbUrl: 'https://vuejs.org/images/logo.png'
+      title: 'Deep dive into Vue.js',
+      desc:
+        '사용법만 알았던 Vue.js, 이번 기회에 Vue.js가 어떻게 만들어졌는지 어떠한 원리로 동작하는지 깊게 알아봅시다.',
+      author: '이선협, Cobalt. Inc',
+      thumbUrl: '/static/sixth/img/presenters/author03.jpeg'
     }
   ];
+
+  private mounted() {
+    const map = new daum.maps.Map(this.$refs.map, {
+      center: new daum.maps.LatLng(37.497145, 127.028567),
+      level: 3
+    });
+
+    const marker = new daum.maps.Marker({
+      position: new daum.maps.LatLng(37.497145, 127.028567),
+      image: new daum.maps.MarkerImage('/logo.png', new daum.maps.Size(50, 50), {
+        offset: new daum.maps.Point(20, 40)
+      })
+    }).setMap(map);
+
+    new daum.maps.InfoWindow({
+      position: new daum.maps.LatLng(37.4975, 127.02863),
+      content: `<div style="padding:5px;background-color: #62BC7F;color: #3C475E;font-weight:
+        bold;width: 150px;">Hello Vuers!!</div>`
+    }).open(map, marker);
+  }
 }
 </script>
 
@@ -110,7 +126,7 @@ export default class Sixth extends Vue {
       font-weight: normal;
       font-style: normal;
       font-stretch: normal;
-      line-height: 1.54;
+      line-height: 1.8;
       letter-spacing: -0.4px;
       word-break: keep-all;
     }
@@ -125,6 +141,7 @@ export default class Sixth extends Vue {
       display: inline-flex;
       justify-content: center;
       align-items: center;
+      text-decoration: none;
     }
   }
   .session-wrap {
@@ -148,7 +165,7 @@ export default class Sixth extends Vue {
         box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
         display: flex;
         margin: 21px auto;
-        padding: 15px;
+        padding: 15px 20px;
         max-width: 530px;
         .session-thumb {
           flex: 0 0 120px;
@@ -177,7 +194,7 @@ export default class Sixth extends Vue {
             font-weight: normal;
             font-style: normal;
             font-stretch: normal;
-            line-height: 1;
+            line-height: 1.8;
             letter-spacing: -0.3px;
             flex: 0 0 55px;
             color: $Dark;
@@ -196,7 +213,8 @@ export default class Sixth extends Vue {
     }
   }
   .info-wrap {
-    padding: 80px 0px 65px;
+    // padding: 80px 0px 65px;
+    padding: 80px 0px 0px;
     .location {
       .location-title {
         font-size: 30px;
@@ -230,6 +248,10 @@ export default class Sixth extends Vue {
         margin-bottom: 25px;
         color: $Dark;
       }
+    }
+    #map {
+      width: 100%;
+      height: 300px;
     }
   }
   .sponsor-wrap {

@@ -4,8 +4,8 @@
       <h3 class="howdy">Hello Vuers!</h3>
       <h2 class="welcome">Welcome</h2>
       <p class="welcome-message ko">
-        Vuetiful Korea 6th에 관심을 가져주신 여러분 모두 환영합니다. <br>
-        Vuetiful Korea가 6회의 모임을 가지며 모은 많은 분들의 의견 공유와 앞으로 나아갈 방향을 가리켜보고자 합니다. Vuetiful Korea 6th에 관심을 가져주신 여러분 모두 환영합니다.
+        Vuetiful Korea 6th 밋업에 관심을 가져주신 여러분 모두 환영합니다.<br>
+        Vuetiful Korea가 여섯번의 모임을 가지며 모은 많은 분들의 의견 공유와<br />앞으로 나아갈 방향을 가리켜보고자 합니다.<br /><br />이번 밋업에 관심을 가져주신 여러분 모두 환영합니다.
       </p>
     </div>
     <hr>
@@ -72,7 +72,7 @@
             <span class="feature-title ko">적극적인 토론</span>
           </dt>
           <dd class="ko">
-            Vuetiful Korea 6th에 관심을 가져주신 여러분 모두 환영합니다. Vuetiful Korea가 6회의 모임을 가지며 모은 많은 분들의 의견 공유와 앞으로 나아갈 방향을 가리켜보고자 합니다. Vuetiful Korea 6th에 관심을 가져주신 여러분 모두 환영합니다.
+            Vuetiful Korea 6th에 관심을 가져주신 여러분 모두 환영합니다.<br />Vuetiful Korea가 6회의 모임을 가지며 모은<br />많은 분들의 의견 공유와 앞으로 나아갈 방향을 가리켜보고자 합니다.<br />Vuetiful Korea 6th에 관심을 가져주신 여러분 모두 환영합니다.
           </dd>
         </dl>
       </li>
@@ -114,7 +114,8 @@ export default class SixthAbout extends Vue {}
     }
     .welcome-message {
       letter-spacing: -0.4px;
-      font-size: 13px;
+      line-height: 1.8;
+      font-size: 1rem;
       margin: 0px auto;
       padding: 0px 15px;
       word-break: keep-all;
@@ -150,7 +151,8 @@ export default class SixthAbout extends Vue {}
         }
         dd {
           padding-top: 15px;
-          font-size: 13px;
+          font-size: 1rem;
+          line-height: 1.8;
           letter-spacing: -0.4px;
         }
       }

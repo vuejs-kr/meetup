@@ -149,6 +149,7 @@ export default class SixthLayout extends Vue {
       height: 18vmax;
     }
     .reversed {
+      margin-bottom: -1px;
       transform: rotate(180deg);
     }
   }

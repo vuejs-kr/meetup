@@ -5,16 +5,16 @@
       <button class="bar-dropdown-button" @mouseover="showDropdown">ARCHIVE</button>
       <transition name="fade">
         <div v-if="this.dropdownDisplayed" class="bar-dropdown-menu">
-          <router-link class="bar-dropdown-item first" to="/">1st meetup</router-link>
-          <router-link class="bar-dropdown-item" to="/">2nd meetup</router-link>
-          <router-link class="bar-dropdown-item" to="/">3rd meetup</router-link>
-          <router-link class="bar-dropdown-item" to="/">4th meetup</router-link>
-          <router-link class="bar-dropdown-item" to="/">5th meetup</router-link>
-          <router-link class="bar-dropdown-item" to="/">6th meetup</router-link>
+          <router-link class="bar-dropdown-item first" to="/first">1st meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/second">2nd meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/third">3rd meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/fourth">4th meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/fifth">5th meetup</router-link>
+          <router-link class="bar-dropdown-item" to="/sixth">6th meetup</router-link>
         </div>
       </transition>
     </div>
-    <router-link class="bar-tab register-border" to="#">REGISTER</router-link>
+    <a class="bar-tab register-border" href="https://meetgo.kr/#/userEventDetail/vuetiful06" target="_blank">REGISTER</a>
   </div>
 </template>
 
@@ -55,9 +55,6 @@ export default {
     letter-spacing: 1.5px;
     font-size: 1rem;
     transition: 0.25s;
-    &:hover {
-      font-weight: bold;
-    }
   }
   .bar-dropdown {
     display: flex;
@@ -71,9 +68,7 @@ export default {
       padding: 1.6vh 3vw 1.6vh 3vw;
       letter-spacing: 1.5px;
       font-size: 1rem;
-      &:hover {
-        font-weight: bold;
-      }
+      outline: none;
     }
     .bar-dropdown-menu {
       transition: all 0.3s ease;
