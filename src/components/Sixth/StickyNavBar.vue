@@ -37,7 +37,7 @@ export default {
       this.dropdownDisplayed = false;
     },
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .sticky-container {
@@ -73,17 +73,20 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0;
+      padding: 2.5vh 0;
       .sticky-dropdown-button {
-        padding: 4vh 1.6vw;
+        cursor: pointer;
+        padding: 1.6vh 1.6vw;
         letter-spacing: 1.5px;
         font-size: 13px;
+        &:hover {
+          font-weight: bold;
+        }
       }
       .sticky-dropdown-menu {
         transition: all 0.3s ease;
         position: absolute;
         top: calc(10vh - 4px);
-        opacity: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -105,14 +108,6 @@ export default {
         }
         .first {
           box-shadow: inset 0px 10px 10px -7px rgba(0,0,0,0.2);
-        }
-      }
-      &:hover {
-        .sticky-dropdown-button{
-          font-weight: bold;
-        }
-        .sticky-dropdown-menu {
-          opacity: 1;
         }
       }
     }
