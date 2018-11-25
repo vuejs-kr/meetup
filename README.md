@@ -1,4 +1,4 @@
-# meetup
+# Vue.js meetup
 
 ## Project setup
 ```
