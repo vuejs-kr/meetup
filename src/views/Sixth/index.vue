@@ -110,6 +110,7 @@ export default class Sixth extends Vue {
   text-align: center;
   padding-top: 65px;
   margin: auto 0px;
+  background: white;
   .join-anchor-wrap {
     .join-anchor-title {
       font-size: 1.2rem;
@@ -255,6 +256,7 @@ export default class Sixth extends Vue {
     #map {
       width: 100%;
       height: 300px;
+      z-index: 0;
     }
   }
   .sponsor-wrap {

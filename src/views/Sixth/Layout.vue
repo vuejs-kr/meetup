@@ -123,12 +123,16 @@ export default class SixthLayout extends Vue {
   margin-top: 8vh;
   &:before {
     content: '';
-    position: absolute;
-    height: 92vh;
-    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     z-index: -1;
-    background: linear-gradient(rgba(34, 51, 67, 0.76)), url(~@/assets/sixth/img/main-bg-image.jpg) no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(rgba(34, 51, 67, 0.76)), url(~@/assets/sixth/img/main-bg-image.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
   .main-left,
