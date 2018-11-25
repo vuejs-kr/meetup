@@ -1,19 +1,25 @@
 <template>
   <div id="sixth">
-    <nav-bar :isMobile="isMobile" />
+    <nav-bar v-if="isMobile" :isMobile="isMobile" />
+    <sticky-nav-bar v-if="isDesktop" />
     <div class="main-container" :class="{ isAbout, isMobile }">
-      <img class="main-left" src="~@/assets/sixth/img/vue-left.svg">
+      <div class="main-left">
+        <img class="main-left-image" src="~@/assets/sixth/img/vue-left.svg">
+      </div>
       <div class="main-center">
-        <img class="main-logo" src="~@/assets/sixth/img/vue-up.svg">
+        <div class="main-logo-container top">
+          <img class="main-logo" src="~@/assets/sixth/img/vue-up.svg">
+        </div>
         <img v-if="isHome" class="main-title" src="~@/assets/sixth/img/logo-wordtype-white@2x.png">
         <h1 v-if="isAbout" class="main-title-about">ABOUT US</h1>
-        <img class="main-logo reversed" src="~@/assets/sixth/img/vue-up.svg">
+        <div class="main-logo-container bottom">
+          <img class="main-logo reversed" src="~@/assets/sixth/img/vue-up.svg">
+        </div>
       </div>
-      <img class="main-right" src="~@/assets/sixth/img/vue-right.svg">
+      <div class="main-right">
+        <img class="main-right-image" src="~@/assets/sixth/img/vue-right.svg">
+      </div>
     </div>
-    <transition name="slide-fade" v-if="isDesktop">
-      <sticky-nav-bar v-if="showSticky" />
-    </transition>
     <router-view/>
     <footer-component />
   </div>
@@ -44,10 +50,10 @@ export default class SixthLayout extends Vue {
 
   @Watch('$route.name')
   private watchRouteName(name: string) {
-    if (name === 'about') {
+    if (name === 'root_about') {
       this.isAbout = true;
       this.isHome = false;
-    } else if (name === 'home') {
+    } else if (name === 'root') {
       this.isHome = true;
       this.isAbout = false;
     }
@@ -112,23 +118,38 @@ export default class SixthLayout extends Vue {
 }
 .main-container {
   display: flex;
-  height: 100vh;
+  height: 92vh;
   width: 100vw;
-  transition: all 0.5s ease;
+  margin-top: 8vh;
   &:before {
     content: '';
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     z-index: -1;
-    background: linear-gradient(rgba(34, 51, 67, 0.76)), url(~@/assets/sixth/img/main-bg-image.jpg) no-repeat;
-    background-attachment: fixed;
+    background: linear-gradient(rgba(34, 51, 67, 0.76)), url(~@/assets/sixth/img/main-bg-image.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
   .main-left,
   .main-right {
+    display: flex;
+    align-items: center;
     height: 100%;
-    width: 15.3vw;
+    width: 20vw;
+    .main-left-image, .main-right-image {
+      height: 100%;
+    }
+  }
+  .main-left {
+    justify-content: flex-start;
+  }
+  .main-right {
+    justify-content: flex-end;
   }
   .main-center {
     flex: 1 1 80%;
@@ -145,11 +166,21 @@ export default class SixthLayout extends Vue {
       font-weight: bold;
       color: white;
     }
-    .main-logo {
-      height: 18vmax;
+    .main-logo-container {
+      display: flex;
+      justify-content: center;
+      height: 30vmin;
+      .main-logo {
+        height: 100%;
+      }
+    }
+    .top {
+      align-items: flex-start;
+    }
+    .bottom {
+      align-items: flex-end;
     }
     .reversed {
-      margin-bottom: -1px;
       transform: rotate(180deg);
     }
   }
@@ -159,19 +190,14 @@ export default class SixthLayout extends Vue {
 }
 .isMobile {
   margin-top: 8vh;
-  & + .main-title-about {
-    font-size: 5px;
+  height: 568px;
+  &:before {
+    height: 768px;
   }
-}
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-10px);
-  opacity: 0;
+  .main-center {
+    .main-title-about {
+      font-size: 2rem;
+    }
+  }
 }
 </style>

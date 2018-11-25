@@ -120,7 +120,7 @@ export default {
   .bar-dropdown {
     .bar-dropdown-button {
       color: #34495e;
-      font-size: 1rem;
+      font-size: 0.5rem;
     }
     .bar-dropdown-menu {
       position: absolute;
@@ -128,7 +128,7 @@ export default {
       width: 112px;
       border-top: 2px solid #41b883;
       .bar-dropdown-item {
-        font-size: 1rem;
+        font-size: 0.5rem;
         width: 100%;
       }
     }
@@ -136,7 +136,7 @@ export default {
   .bar-tab {
     color: #34495e;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
   .bar-tab + .bar-tab {
     margin-left: 8vw;

@@ -63,6 +63,7 @@ export default class SixthAbout extends Vue {
 @import '~@/assets/sixth/css/scheme';
 
 .about {
+  background: white;
   padding-bottom: 125px;
   .about-title {
     padding: 70px 0px;
