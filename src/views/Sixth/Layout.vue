@@ -50,10 +50,10 @@ export default class SixthLayout extends Vue {
 
   @Watch('$route.name')
   private watchRouteName(name: string) {
-    if (name === 'about') {
+    if (name === 'root_about') {
       this.isAbout = true;
       this.isHome = false;
-    } else if (name === 'home') {
+    } else if (name === 'root') {
       this.isHome = true;
       this.isAbout = false;
     }
@@ -194,19 +194,10 @@ export default class SixthLayout extends Vue {
   &:before {
     height: 768px;
   }
-  & + .main-title-about {
-    font-size: 5px;
+  .main-center {
+    .main-title-about {
+      font-size: 2rem;
+    }
   }
-}
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateY(-10px);
-  opacity: 0;
 }
 </style>
