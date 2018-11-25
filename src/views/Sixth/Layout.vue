@@ -191,6 +191,10 @@ export default class SixthLayout extends Vue {
 }
 .isMobile {
   margin-top: 8vh;
+  height: 568px;
+  &:before {
+    height: 768px;
+  }
   & + .main-title-about {
     font-size: 5px;
   }
