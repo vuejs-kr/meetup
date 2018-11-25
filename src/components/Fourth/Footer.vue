@@ -17,7 +17,7 @@
             <h2>PREVIOUS MEETUP</h2>
           </div>
           <ul class="meetups">
-            <li v-for="meetup in prevMeetups" :key="meetup.name"><a :href="meetup.pageUrl">{{ meetup.name}}</a></li>
+            <li v-for="meetup in prevMeetups" :key="meetup.name"><router-link :to="meetup.pageUrl">{{ meetup.name}}</router-link></li>
           </ul>
         </el-container>
       </el-col>

@@ -336,15 +336,15 @@ export const regularParticipants = [
 export const prevMeetups = [
   {
     name: 'Vuetiful Korea 1회',
-    pageUrl: 'http://vuejs.kr/meetup/first'
+    pageUrl: '/first'
   },
   {
     name: 'Vuetiful Korea 2회',
-    pageUrl: 'http://vuejs.kr/meetup/second'
+    pageUrl: '/second'
   },
   {
     name: 'Vuetiful Korea 3회',
-    pageUrl: 'http://vuejs.kr/meetup/third'
+    pageUrl: '/third'
   }
 ];
 
@@ -352,16 +352,16 @@ export const sns = [
   {
     name: 'Facebook',
     pageUrl: 'https://www.facebook.com/groups/vuejs.korea',
-    faImg: `${baseUrl}sns/facebook.svg`
+    faImg: `${baseUrl}static/sns/facebook.svg`
   },
   {
     name: 'Slack',
     pageUrl: 'https://vuejs-korea.herokuapp.com',
-    faImg: `${baseUrl}sns/slack.svg`
+    faImg: `${baseUrl}static/sns/slack.svg`
   },
   {
     name: 'Github',
     pageUrl: 'https://github.com/vuejs-kr',
-    faImg: `${baseUrl}sns/github.svg`
+    faImg: `${baseUrl}static/sns/github.svg`
   }
 ];

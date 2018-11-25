@@ -232,19 +232,19 @@ export const regularParticipants = [
 export const prevMeetups = [
   {
     name: 'Vuetiful Korea 1회',
-    pageUrl: 'http://vuejs.kr/meetup/first'
+    pageUrl: '/first'
   },
   {
     name: 'Vuetiful Korea 2회',
-    pageUrl: 'http://vuejs.kr/meetup/second'
+    pageUrl: '/second'
   },
   {
     name: 'Vuetiful Korea 3회',
-    pageUrl: 'http://vuejs.kr/meetup/third'
+    pageUrl: '/third'
   },
   {
     name: 'Vuetiful Korea 4회',
-    pageUrl: 'http://vuejs.kr/meetup/fourth'
+    pageUrl: '/fourth'
   }
 ];
 

@@ -79,8 +79,8 @@ export default {
       }, 800);
     },
     getAbleScopeOfActivity(maximumScopeOfActivityX, maximumScopeOfActivityY, el) {
-      const sponsorFirstRect = document.querySelectorAll('.container-sponsor > * img')[0].getBoundingClientRect();
-      const sponsorLastRect = document.querySelectorAll('.container-sponsor > * img')[1].getBoundingClientRect();
+      // const sponsorFirstRect = document.querySelectorAll('.container-sponsor > * img')[0].getBoundingClientRect();
+      // const sponsorLastRect = document.querySelectorAll('.container-sponsor > * img')[1].getBoundingClientRect();
       const sponsorExtraSpace = 120;
       const volunteerExtraSpace = 100;
 
@@ -92,13 +92,13 @@ export default {
         y = y - volunteerExtraSpace;
       }
 
-      if (x >= sponsorFirstRect.x - sponsorExtraSpace && x <= sponsorLastRect.x + sponsorExtraSpace) {
-        x =
-          Math.floor(Math.random() * (500 - 300 + 1) + 300) +
-          (x - (sponsorFirstRect.x - sponsorExtraSpace) <= x - (sponsorLastRect.x + sponsorExtraSpace)
-            ? x + (x - (sponsorFirstRect.x - sponsorExtraSpace))
-            : x - (x - (sponsorLastRect.x + sponsorExtraSpace)));
-      }
+      // if (x >= sponsorFirstRect.x - sponsorExtraSpace && x <= sponsorLastRect.x + sponsorExtraSpace) {
+      //   x =
+      //     Math.floor(Math.random() * (500 - 300 + 1) + 300) +
+      //     (x - (sponsorFirstRect.x - sponsorExtraSpace) <= x - (sponsorLastRect.x + sponsorExtraSpace)
+      //       ? x + (x - (sponsorFirstRect.x - sponsorExtraSpace))
+      //       : x - (x - (sponsorLastRect.x + sponsorExtraSpace)));
+      // }
 
       /* tslint:disable */
       for (let i = 0; i < Object.keys(this.assignedPositions).length; i++) {
@@ -196,21 +196,21 @@ export default {
       el.setAttribute('arithmetics', el.getAttribute('arithmetics') === 'minus' ? 'plus' : 'minus');
       return scopeOfActivity;
     },
-    lightUp(node) {
-      let radius = 0;
-      const interval = window.setInterval(() => {
-        node.style.webkitMask =
-          '-webkit-gradient(radial, 17 17, ' +
-          radius +
-          ', 17 17, ' +
-          (radius + 15) +
-          ', from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)))';
-        radius++;
-        if (node.offsetWidth + 15 === radius) {
-          window.clearInterval(interval);
-        }
-      }, 10);
-    },
+    // lightUp(node) {
+    //   let radius = 0;
+    //   const interval = window.setInterval(() => {
+    //     node.style.webkitMask =
+    //       '-webkit-gradient(radial, 17 17, ' +
+    //       radius +
+    //       ', 17 17, ' +
+    //       (radius + 15) +
+    //       ', from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)))';
+    //     radius++;
+    //     if (node.offsetWidth + 15 === radius) {
+    //       window.clearInterval(interval);
+    //     }
+    //   }, 10);
+    // },
     checkVisible(elm, threshold, mode) {
       threshold = threshold || 0;
       mode = mode || 'visible';
@@ -247,10 +247,10 @@ export default {
       if (this.checkVisible(contributorsElm, scrollDist + ExtraDist, scrollMode) && !alreadySeen) {
         alreadySeen = true;
         this.spreadOut();
-        const sponsorImages = document.querySelectorAll('.container-sponsor img');
-        for (const sponsorImage of sponsorImages) {
-          this.lightUp(sponsorImage);
-        }
+        // const sponsorImages = document.querySelectorAll('.container-sponsor img');
+        // for (const sponsorImage of sponsorImages) {
+        //   this.lightUp(sponsorImage);
+        // }
       }
     };
 
