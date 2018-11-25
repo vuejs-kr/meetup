@@ -108,7 +108,8 @@ export default class Sixth extends Vue {
 
 .content {
   text-align: center;
-  margin: 65px auto 0px;
+  padding-top: 65px;
+  margin: auto 0px;
   .join-anchor-wrap {
     .join-anchor-title {
       font-size: 1.2rem;

@@ -41,6 +41,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .sticky-container {
+  z-index: 1;
   position: fixed;
   display: flex;
   top: 0;
