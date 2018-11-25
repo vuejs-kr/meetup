@@ -35,14 +35,14 @@
         <dd class="location-name">NAVER D2 Startup Factory</dd>
       </dl>
       <a href="http://www.d2startup.com/" class="d2-link" target="_blank">
-        <img src="/static/sixth/img/sponsors/d2-logo.jpg" alt="Naver D2" />
+        <img :src="`${this.baseUrl}static/sixth/img/sponsors/d2-logo.jpg`" alt="Naver D2" />
       </a>
       <div id="map" ref='map'></div>
     </div>
     <div class="sponsor-wrap">
       <h3 class="sponsor-title">Sponsor</h3>
       <a href="https://linepluscorp.com/" class="sponsor-link" target="_blank">
-        <img src="/static/sixth/img/sponsors/line-logo.png" alt="Line corp" />
+        <img :src="`${this.baseUrl}static/sixth/img/sponsors/line-logo.png`" alt="Line corp" />
       </a>
     </div>
   </div>
@@ -55,19 +55,20 @@ declare const daum: any;
 
 @Component({})
 export default class Sixth extends Vue {
+  private baseUrl = process.env.BASE_URL;
   private sessionList = [
     {
       title: 'Vue.js를 이용한 백오피스 구현기',
       desc: '관리자, 물류, 점포 등의 페이지를 구현하면서 생각한 컴포넌트 재사용성 이슈와 조금의 백앤드 이야기',
       author: '마광휘, 와인포인트',
-      thumbUrl: '/static/sixth/img/presenters/author01.jpeg'
+      thumbUrl: `${this.baseUrl}static/sixth/img/presenters/author01.jpeg`
     },
     {
       id: 2,
       title: 'Nuxt.js vs Next.js',
       desc: 'Nuxt.js vs Next.js',
       author: '임석민',
-      thumbUrl: '/static/sixth/img/presenters/author02.jpeg'
+      thumbUrl: `${this.baseUrl}static/sixth/img/presenters/author02.jpeg`
     },
     {
       id: 3,
@@ -75,11 +76,12 @@ export default class Sixth extends Vue {
       desc:
         '사용법만 알았던 Vue.js, 이번 기회에 Vue.js가 어떻게 만들어졌는지 어떠한 원리로 동작하는지 깊게 알아봅시다.',
       author: '이선협, Cobalt. Inc',
-      thumbUrl: '/static/sixth/img/presenters/author03.jpeg'
+      thumbUrl: `${this.baseUrl}static/sixth/img/presenters/author03.jpeg`
     }
   ];
 
   private mounted() {
+    // console.log(process.env.BASE_URL);
     const map = new daum.maps.Map(this.$refs.map, {
       center: new daum.maps.LatLng(37.497145, 127.028567),
       level: 3
@@ -87,7 +89,7 @@ export default class Sixth extends Vue {
 
     const marker = new daum.maps.Marker({
       position: new daum.maps.LatLng(37.497145, 127.028567),
-      image: new daum.maps.MarkerImage('/logo.png', new daum.maps.Size(50, 50), {
+      image: new daum.maps.MarkerImage(`${this.baseUrl}logo.png`, new daum.maps.Size(50, 50), {
         offset: new daum.maps.Point(20, 40)
       })
     }).setMap(map);

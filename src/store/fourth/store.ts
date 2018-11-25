@@ -1,3 +1,5 @@
+const baseUrl = process.env.BASE_URL;
+
 export const registrationUrl = 'https://tumblbug.com/vuetiful';
 
 export const colors = {
@@ -18,7 +20,7 @@ export const presentations = [
     time: '19:35',
     title: '아뇨, 난 Vue.js 사용할건데요?',
     presenter: {
-      imgUrl: '/static/fourth/presenters/hax0r.jpg',
+      imgUrl: `${baseUrl}static/fourth/presenters/hax0r.jpg`,
       name: '우영준',
       affiliation: 'Logispot',
       keywords:
@@ -30,7 +32,7 @@ export const presentations = [
     time: '20:00',
     title: 'Vue.js와 Electron으로 데스크탑 앱 만들기',
     presenter: {
-      imgUrl: '/static/fourth/presenters/irodong.jpg',
+      imgUrl: `${baseUrl}static/fourth/presenters/irodong.jpg`,
       name: '고은정',
       affiliation: 'NHN Bugs',
       keywords: 'electron, desktop, chromium, node.js, cross-platform',
@@ -41,7 +43,7 @@ export const presentations = [
     time: '20:30',
     title: 'Apollo로 알아보는 Vue in the GraphQL',
     presenter: {
-      imgUrl: '/static/fourth/presenters/june.png',
+      imgUrl: `${baseUrl}static/fourth/presenters/june.png`,
       fileUrl: 'https://jicjjang.github.io/blog/slides/vue-apollo-graphql/',
       name: '최준석',
       affiliation: 'NHN Bugs',
@@ -90,12 +92,12 @@ export const program = [
 export const sponsors = [
   {
     pageUrl: 'http://www.logi-spot.com',
-    imgUrl: '/static/fourth/sponsors/logispot.png',
+    imgUrl: `${baseUrl}static/fourth/sponsors/logispot.png`,
     name: 'Logispot'
   },
   {
     pageUrl: 'http://coinone.co.kr',
-    imgUrl: '/static/fourth/sponsors/coinone.png',
+    imgUrl: `${baseUrl}static/fourth/sponsors/coinone.png`,
     name: 'Coinone'
   }
 ];
@@ -103,78 +105,78 @@ export const sponsors = [
 export const volunteers = [
   {
     pageUrl: 'http://seungmin.kr',
-    imgUrl: '/static/fourth/volunteers/profile/smilee.jpg',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/smilee.jpg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/smilee.jpg`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/smilee.jpg`,
     name: '이승민',
     description: '@smilee'
   },
   {
     pageUrl: 'http://github.com/vuetiful',
-    imgUrl: '/static/fourth/volunteers/profile/sam.png',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/sam.png`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '박새미',
     description: '잠만보'
   },
   {
     pageUrl: 'http://github.com/vuetiful',
-    imgUrl: '/static/fourth/volunteers/profile/chris.jpg',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/chris.jpg`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '양성민',
     description: '조금 큰 사진요정'
   },
   {
     pageUrl: 'https://www.hax0r.info',
-    imgUrl: '/static/fourth/volunteers/profile/hax0r.jpg',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/hax0r.jpg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/hax0r.jpg`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/hax0r.jpg`,
     name: '우영준',
     description: 'a.k.a hax0r'
   },
   {
     pageUrl: 'https://www.facebook.com/kkd927',
-    imgUrl: '/static/fourth/volunteers/profile/kkd927.png',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/kkd927b2.png',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/kkd927.png`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/kkd927b2.png`,
     name: '권경덕',
     description: 'kkd927'
   },
   {
     pageUrl: 'https://wickso.me/',
-    imgUrl: '/static/fourth/volunteers/profile/wicksome.png',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/wicksome.png`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '김영준',
     description: 'SGkgZ3V5cyEgSSdtIHdpY2tzb21lIHNvZnR3YXJlIGVuZ2luZWVyISA6RA=='
   },
   {
     pageUrl: 'http://github.com/vuetiful',
-    imgUrl: '/static/fourth/volunteers/profile/chayeoi.png',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/chayeoi.png`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '김찬연',
     description: '설명을 입력해주세요.'
   },
   {
     pageUrl: 'http://github.com/vuetiful',
-    imgUrl: '/static/fourth/volunteers/profile/no-profile.jpg',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/no-profile.jpg`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '김범연',
     description: '설명을 입력해주세요.'
   },
   {
     pageUrl: 'http://github.com/vuetiful',
-    imgUrl: '/static/fourth/volunteers/profile/kelly.png',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/kelly.png`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '우경화',
     description: '설명을 입력해주세요.'
   },
   {
     pageUrl: 'http://github.com/vuetiful',
-    imgUrl: '/static/fourth/volunteers/profile/no-profile.jpg',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/no-profile.jpg`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '고예슬',
     description: '설명을 입력해주세요.'
   },
   {
     pageUrl: 'https://github.com/kciter',
-    imgUrl: '/static/fourth/volunteers/profile/kciter.png',
-    backgroundImageUrl: '/static/fourth/volunteers/background-image/vue.jpeg',
+    imgUrl: `${baseUrl}static/fourth/volunteers/profile/kciter.png`,
+    backgroundImageUrl: `${baseUrl}static/fourth/volunteers/background-image/vue.jpeg`,
     name: '이선협',
     description: '화이팅!'
   }
@@ -350,16 +352,16 @@ export const sns = [
   {
     name: 'Facebook',
     pageUrl: 'https://www.facebook.com/groups/vuejs.korea',
-    faImg: '/static/sns/facebook.svg'
+    faImg: `${baseUrl}sns/facebook.svg`
   },
   {
     name: 'Slack',
     pageUrl: 'https://vuejs-korea.herokuapp.com',
-    faImg: '/static/sns/slack.svg'
+    faImg: `${baseUrl}sns/slack.svg`
   },
   {
     name: 'Github',
     pageUrl: 'https://github.com/vuejs-kr',
-    faImg: '/static/sns/github.svg'
+    faImg: `${baseUrl}sns/github.svg`
   }
 ];
