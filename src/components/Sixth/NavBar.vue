@@ -89,6 +89,7 @@ export default {
         font-size: 15px;
         line-height: 1;
         letter-spacing: normal;
+        color: #34495e;
         &:hover {
           background: #d0d6dc;
         }
