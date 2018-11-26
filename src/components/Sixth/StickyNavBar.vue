@@ -81,6 +81,7 @@ export default {
         letter-spacing: 1.5px;
         font-size: 1rem;
         outline: none;
+        color: #34495e;
       }
       .sticky-dropdown-menu {
         transition: all 0.3s ease;
@@ -97,6 +98,7 @@ export default {
           padding: 2.5vh 0.5vw;
           width: 100%;
           text-decoration: none;
+          color: #34495e;
           font-weight: 500;
           font-size: 15px;
           line-height: 1;
