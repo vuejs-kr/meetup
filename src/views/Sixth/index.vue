@@ -66,7 +66,7 @@ export default class Sixth extends Vue {
     {
       id: 2,
       title: 'Nuxt.js vs Next.js',
-      desc: 'Nuxt.js vs Next.js',
+      desc: '현존하는 핫한 두 View 라이브러리인 vue.js와 react.js의 편의성을 위해 Framework가 만들어졌습니다. 그것들을에 대한 내용과 장,단점에 대해 이야기해보겠습니다.',
       author: '임석민',
       thumbUrl: `${this.baseUrl}static/sixth/img/presenters/author02.jpeg`
     },
