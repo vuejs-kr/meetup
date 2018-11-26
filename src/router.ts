@@ -23,7 +23,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'root',
       component: SixthLayout,
       children: [
         { path: '', name: 'root', component: Sixth },
